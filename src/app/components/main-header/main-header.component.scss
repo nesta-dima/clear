@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+
+.main-header {
+  color: $root;
+  height: 100%;
+  padding-top: 125px;
+  padding-bottom: 60px;
+  background: url("../../../../src/assets/images/bg_photo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  &__wrapper {
+    width: $desktop;
+    margin: 0 auto;
+  }
+  &__title{
+    width: 800px;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 18px;
+
+    }
+  }
+}

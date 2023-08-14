@@ -9,8 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
 @NgModule({
-	declarations: [AppComponent, HeaderComponent],
+	declarations: [AppComponent, HeaderComponent, MainHeaderComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
