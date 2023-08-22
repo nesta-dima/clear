@@ -4,6 +4,12 @@
   width: 100%;
   height: 90px;
   display: flex;
+  background: white;
+  &-open {
+    position: fixed;
+    z-index: 3;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -11,19 +17,30 @@
     margin: 0 auto;
     gap: 10px;
 
-    & button{
+    .call{
       width: 200px;
       height: 50px;
       color: white;
       background: $red;
       font-size: 16px;
-      //font-weight: bold;
-      font-family: 'Greycliff CF Bold', sans-serif
+      font-family: 'Greycliff CF Bold', sans-serif;
+      &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        transition: all 0.3s;
+      }
+    }
+    .btn {
+      display: none;
     }
   }
   &__logo{
     display: flex;
     align-items: center;
+    flex-grow: 1;
+
+    span{
+      color: #4F4D4A;
+    }
 
     img {
       width: 134px;
@@ -36,18 +53,173 @@
     padding: 0;
     display: flex;
     list-style-type: none;
-    & li:not(:last-child){
-      margin-right: 30px;
+
+    & li {
+      font-family: 'Greycliff CF Bold', sans-serif;
       font-size: 14px;
       font-weight: bold;
+    }
+    & li:not(:last-child){
+      margin-right: 30px;
+
     }
   }
   &__phone{
     display: flex;
     align-items: center;
+    padding: 0 10px;
+    font-family: Arial, sans-serif;
     a {
       text-decoration: none;
+      color: #4F4D4A;
+      font-weight: bold;
     }
+  }
+}
+
+.mobile-menu{
+  position: fixed;
+  background: #F2F2F2;
+  padding: 10px;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+
+  .mobile-menu__block{
+    &-title {
+      color: #4F4D4A;
+      font-size: 24px;
+      font-weight: bold;
+
+      padding: 10px 0;
+    }
+
+    &-option{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      a{
+        text-decoration: none;
+        color: #4F4D4A;
+        li {
+          border-bottom: 1px solid rgba(#515151,0.5);
+          padding: 10px 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .call {
+    color: white;
+    background: $red;
+    font-size: 16px;
+    padding: 20px 0;
+  }
+
+  .wrapper {
+    display: grid;
+    gap: 20px;
+    overflow: auto;
+    height: 100%;
+
+    & .mobile-menu__block:nth-child(1) div{
+      border-bottom: 1px solid red;
+    }
+
+    ul.mobile-menu__social {
+      list-style-type: none;
+      display: flex;
+      gap: 10px;
+      margin: 0 0 20px;
+      padding: 20px 0 0;
+      justify-content: center;
+      a {
+        width: 50px;
+        height: 50px;
+        background: #4F4D4A;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          height: 30px;
+          width: 30px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+      a:nth-child(1)  li {
+        background-image: url('../../../../src/assets/svg/instagram.svg');
+      }
+      a:nth-child(2)  li {
+        background-image: url('../../../../src/assets/svg/facebook.svg');
+      }
+      a:nth-child(3)  li {
+        background-image: url('../../../../src/assets/svg/telegram.svg');
+      }
+      a:nth-child(4)  li {
+        background-image: url('../../../../src/assets/svg/ws.svg');
+      }
+    }
+
+  }
+
+  .phone {
+    font-size: 16px;
+    text-decoration: none;
+    color: #4F4D4A;
+    font-family: Arial, sans-serif;
+
+    button {
+      background: white;
+      width: 100%;
+      font-weight: bold;
+      padding: 20px;
+      border: 1px solid #4F4D4A;
+    }
+  }
+}
+
+@media (max-width: 1180px) {
+  .header {
+    height: 50px;
+
+    &__wrapper{
+      width: 100%;
+      padding: 10px;
+    }
+
+    &__logo{
+      img {
+        width: 75px;
+        height: 25px;
+      }
+      span {
+        font-size: 11px;
+      }
+    }
+    &__menu {
+      display: none;
+    }
+
+    &__phone {
+      display: none;
+    }
+
+    .call{
+      display: none;
+    }
+
+    .btn {
+      display: block;
+    }
+
   }
 
 }

@@ -40,15 +40,12 @@
 ///* You can add global styles to this file, and also import other style files */
 //
 
-@font-face {
-  font-family: 'Greycliff CF';
-  src: url('../assets/fonts/greycliffcf-medium.otf') format('otf'),
-}
-@font-face {
-  font-family: 'Greycliff CF Bold';
-  src: url('../assets/fonts/greycliffcf-bold.otf') format('otf'),
-}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Greycliff CF', sans-serif }
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #F2F2F2;
+}
 
 

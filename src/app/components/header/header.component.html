@@ -1,19 +1,64 @@
-<div class="header">
-  <div class="header__wrapper">
+<div class="header" [class.header-open]="this.isOpen">
+  <div class="header__wrapper" >
     <div class="header__logo">
-      <img src="./assets/images/logo.png" alt="LA CLEAN"/>
+      <a href="/">
+        <img src="./assets/images/logo.png" alt="LA CLEAN"/>
+      </a>
       <div><span>Профессиональные<br /> клининговые услуги</span></div>
     </div>
     <ul class="header__menu">
-      <li>УСЛУГИ</li>
+      <li>
+        УСЛУГИ
+      </li>
       <li>О НАС</li>
       <li>КОНТАКТЫ</li>
       <li>НАШИ РАБОТЫ</li>
     </ul>
     <div class="header__phone">
       <mat-icon> phone</mat-icon>
-      <a href="tel:455-440-440">455-440-440</a>
+      <a href="tel:+455-440-440">455-440-440</a>
     </div>
-    <button mat-button>Заказать звонок</button>
+    <button mat-button class="call">Заказать звонок</button>
+    <button mat-icon-button class="btn" aria-label="Menu" (click)="openMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</div>
+<div *ngIf="isOpen" class="mobile-menu">
+  <div class="wrapper">
+    <a class="phone" href="tel:+455-440-440">
+      <button mat-button ><mat-icon>phone</mat-icon> 455-440-440</button>
+    </a>
+    <button mat-button class="call">Заказать звонок</button>
+    <ul class="mobile-menu__social">
+      <a href="/"><li></li></a>
+      <a href="/"><li></li></a>
+      <a href="/"><li></li></a>
+      <a href="/"><li></li></a>
+    </ul>
+    <div class="mobile-menu__block">
+      <div class="mobile-menu__block-title">УСЛУГИ</div>
+      <ul class="mobile-menu__block-option">
+        <a href="/"><li>Генеральная уборка</li></a>
+        <a href="/"><li>Поддерживающая уборка</li></a>
+        <a href="/"><li>Мытье окон</li></a>
+        <a href="/"><li>Химчистка</li></a>
+      </ul>
+    </div>
+    <div class="mobile-menu__block">
+      <div class="mobile-menu__block-title">О НАС</div>
+      <ul class="mobile-menu__block-option">
+        <a href="/"><li>Информация о компании</li></a>
+        <a href="/"><li>Расчет стоимости услуг</li></a>
+        <a href="/"><li>популярные вопросы</li></a>
+        <a href="/"><li>Отзывы</li></a>
+      </ul>
+    </div>
+    <div class="mobile-menu__block">
+      <div class="mobile-menu__block-title">КОНТАКТЫ</div>
+    </div>
+    <div class="mobile-menu__block">
+      <div class="mobile-menu__block-title">НАШИ РАБОТЫ</div>
+    </div>
   </div>
 </div>
