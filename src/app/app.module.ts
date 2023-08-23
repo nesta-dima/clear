@@ -13,8 +13,9 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { AboutCompanyComponent } from './components/about-company/about-company.component';
 import { AboutCompanyService } from './services/about-company.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent],
+	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, FooterComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
