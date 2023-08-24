@@ -11,6 +11,17 @@
       width: 1180px;
       margin: 0 auto;
       gap: 10px;
+      position: relative;
+
+      &:before{
+        content: "";
+        background-image: url('../../../../src/assets/svg/bubble.svg');
+        width: 275px;
+        height: 250px;
+        position: absolute;
+        top: -50px;
+        left: -100px;
+      }
 
       @media (max-width: 1180px){
         flex-wrap: wrap;
@@ -26,6 +37,7 @@
 
   &-block{
     width: 50%;
+    z-index: 1;
 
     @media (max-width: 1180px) {
       width: 100%;
