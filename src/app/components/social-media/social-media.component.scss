@@ -1,0 +1,95 @@
+@import '../../../styles/variables.scss';
+.social-container {
+	margin: auto;
+	max-width: $desktop;
+}
+.social-label {
+	max-width: $desktop;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin: 0 auto;
+	margin-bottom: 18px;
+}
+.social-label p {
+	color: $black;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 37.5px;
+	max-width: 797px;
+	margin: 0;
+}
+.social-label span {
+	color: $light-green;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 37.5px;
+}
+.social-icon {
+	display: flex;
+	gap: 20px;
+	a {
+		display: flex;
+		width: 30px;
+		height: 30px;
+		background-color: $black;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.social-grid-parent {
+	display: flex;
+	height: 340px;
+	width: 100%;
+	gap: 35px;
+}
+
+.social-grid-column1 {
+	width: 190px;
+	height: auto;
+	border-radius: 5px;
+	background-image: url(../../../assets/images/social-blok1.png);
+}
+.social-grid-column2 {
+	display: flex;
+	gap: 15px;
+	flex-direction: column;
+	.social-grid-column2-bg {
+		width: 255px;
+		height: 135px;
+		border-radius: 5px;
+		background-color: $light-green;
+	}
+	.social-grid-column2-img {
+		width: 255px;
+		border-radius: 5px;
+		height: 190px;
+		background-image: url(../../../assets/images/social-blok2.png);
+	}
+}
+.social-grid-column3 {
+	display: flex;
+	gap: 15px;
+	flex-direction: column;
+	.social-grid-column3-bg {
+		width: 300px;
+		height: 135px;
+		border-radius: 5px;
+		background-color: $light-green;
+	}
+	.social-grid-column3-img {
+		width: 300px;
+		height: 201px;
+		border-radius: 5px;
+		background-image: url(../../../assets/images/social-blok3.png);
+	}
+}
+.social-grid-column4 {
+	border-radius: 5px;
+	width: 380px;
+	background-image: url(../../../assets/images/social-blok4.png);
+}
