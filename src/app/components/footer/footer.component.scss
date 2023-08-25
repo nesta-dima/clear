@@ -15,24 +15,26 @@
 	}
 }
 footer {
+	position: relative;
 	display: flex;
+	box-sizing: border-box;
 	align-items: center;
 	width: 1180px;
+	max-width: 100%;
 	margin: 0 auto;
 	justify-content: space-between;
 	@media (max-width: 1180px) {
 		flex-wrap: wrap;
-		width: 100%;
 		gap: 55px;
 		justify-content: unset;
 		flex-direction: column-reverse;
 		align-items: flex-start;
-		margin-left: 15px;
+		padding: 0 15px;
 	}
 }
 .footeer-contact {
 	@media (max-width: 1180px) {
-		width: 380px;
+		width: 100%;
 	}
 }
 .footeer-wrapper-contact {
@@ -51,6 +53,7 @@ footer {
 		color: #4f4d4a;
 		font-size: 20px;
 		line-height: 20px;
+		font-weight: 400;
 		@media (max-width: 1180px) {
 			font-size: 15px;
 		}
@@ -106,4 +109,12 @@ footer {
 }
 .requisites-wrapper {
 	margin-bottom: 8px;
+}
+.bubble {
+	position: absolute;
+	right: -15%;
+	bottom: -42%;
+	@media (max-width: 1180px) {
+		display: none;
+	}
 }
