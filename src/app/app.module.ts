@@ -13,9 +13,23 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { AboutCompanyComponent } from './components/about-company/about-company.component';
 import { AboutCompanyService } from './services/about-company.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CalculatePriceComponent } from './components/calculate-price/calculate-price.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, FooterComponent],
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		MainHeaderComponent,
+		AboutCompanyComponent,
+		CalculatePriceComponent,
+		FooterComponent,
+	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -25,6 +39,13 @@ import { FooterComponent } from './components/footer/footer.component';
 		MatButtonModule,
 		MatMenuModule,
 		HttpClientModule,
+		MatButtonToggleModule,
+		MatTooltipModule,
+		MatCheckboxModule,
+		FormsModule,
+		MatFormFieldModule,
+		MatSelectModule,
+		ReactiveFormsModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],
