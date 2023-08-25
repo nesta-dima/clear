@@ -20,8 +20,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, CalculatePriceComponent],
+	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, CalculatePriceComponent, SocialMediaComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
