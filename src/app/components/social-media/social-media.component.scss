@@ -2,15 +2,23 @@
 .social-container {
 	margin: auto;
 	max-width: $desktop;
+	box-sizing: border-box;
 }
 .social-label {
 	max-width: $desktop;
-
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
 	margin: 0 auto;
 	margin-bottom: 18px;
+	@media (max-width: $desktop) {
+		display: flex;
+
+		height: 171px;
+		background-color: #85a5a9;
+		padding: 15px 15px;
+		flex-direction: column;
+	}
 }
 .social-label p {
 	color: $black;
@@ -20,6 +28,12 @@
 	line-height: 37.5px;
 	max-width: 797px;
 	margin: 0;
+	@media (max-width: $desktop) {
+		padding-top: 36px;
+		text-align: start;
+		font-size: 20px;
+		line-height: 25px;
+	}
 }
 .social-label span {
 	color: $light-green;
@@ -27,6 +41,11 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 37.5px;
+	@media (max-width: $desktop) {
+		font-size: 20px;
+		color: $white;
+		line-height: 25px;
+	}
 }
 .social-icon {
 	display: flex;
@@ -46,6 +65,9 @@
 	height: 340px;
 	width: 100%;
 	gap: 35px;
+	@media (max-width: $desktop) {
+		display: none;
+	}
 }
 
 .social-grid-column1 {
