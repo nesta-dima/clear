@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FooterComponent } from './components/footer/footer.component';
+import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -29,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
 		AboutCompanyComponent,
 		CalculatePriceComponent,
 		FooterComponent,
+  HowWeWorkComponent,
 	],
 	imports: [
 		BrowserModule,
