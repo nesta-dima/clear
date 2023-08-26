@@ -20,8 +20,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { QuestionsComponent } from './components/questions/questions.component';
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, CalculatePriceComponent],
+	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, CalculatePriceComponent, QuestionsComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
