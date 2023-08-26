@@ -1,4 +1,5 @@
 @import '../../../styles/variables.scss';
+
 .footer-label_dark {
 	color: $root;
 }
@@ -7,15 +8,23 @@
 }
 .footer-label {
 	font-size: 36px;
-	font-weight: 400;
 	line-height: 44px;
 	text-transform: uppercase;
-	margin-top: 0px;
+	margin-top: 0;
+  font-weight: bold;
 	@media (max-width: $desktop) {
 		font-size: 24px;
 	}
 }
-footer {
+
+.footer {
+  overflow: hidden;
+  padding-bottom: 200px;
+  @media (max-width: $desktop) {
+    padding-bottom: 50px;
+  }
+}
+.wrapper {
 	position: relative;
 	display: flex;
 	box-sizing: border-box;
@@ -36,6 +45,7 @@ footer {
 .footer-contact {
 	@media (max-width: $desktop) {
 		width: 100%;
+    z-index: 2;
 	}
 }
 .footer-wrapper-contact {
@@ -74,7 +84,7 @@ footer {
 	border-radius: 5px;
 	width: 385px;
 	height: 317px;
-	background-image: url(../../../assets//images/footer.png);
+	background-image: url(../../../assets/images/footer.png);
 	@media (max-width: $desktop) {
 		display: none;
 	}
@@ -112,9 +122,16 @@ footer {
 }
 .bubble {
 	position: absolute;
-	right: -15%;
-	bottom: -42%;
-	@media (max-width: $desktop) {
-		display: none;
-	}
+  width: 315px;
+  height: 348px;
+  background-image: url("../../../assets/svg/bubble.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: -213px;
+  bottom: -242px;
+  @media (max-width: $desktop) {
+    right: -120px;
+    bottom: -80px;
+    z-index: 1;
+  }
 }
