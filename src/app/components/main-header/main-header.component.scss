@@ -1,176 +1,183 @@
 @import '../../../styles/variables.scss';
 
 .main-header {
-	color: $black;
-	padding: 80px 0 50px;
-	background: url('../../../../src/assets/images/bg_photo.png');
-	background-repeat: no-repeat;
-	position: relative;
+  color: $black;
+  padding: 80px 0 50px;
+  background: url("../../../../src/assets/images/bg_photo.png");
+  background-repeat: no-repeat;
+  position: relative;
 
-	&__social {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+  &__social{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-		&-item {
-			display: flex;
-			flex-direction: column;
-			padding: 30px 0;
+    &-item {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0;
 
-			a {
-				width: 30px;
-				height: 30px;
-				background: white no-repeat center;
-				margin: 10px;
-				border-radius: 50%;
-				transition: all 0.3s;
-				&:hover {
-					box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-					cursor: pointer;
-				}
-			}
+      a{
+        width: 30px;
+        height: 30px;
+        background: white no-repeat center;
+        margin: 10px;
+        border-radius: 50%;
+        transition: all 0.3s;
+        &:hover {
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          cursor: pointer;
+        }
+      }
 
-			a:nth-child(1) {
-				background-image: url('../../../../src/assets/svg/instagram-black.svg');
-			}
-			a:nth-child(2) {
-				background-image: url('../../../../src/assets/svg/facebook-black.svg');
-			}
-			a:nth-child(3) {
-				background-image: url('../../../../src/assets/svg/telegram-black.svg');
-			}
-			a:nth-child(4) {
-				background-image: url('../../../../src/assets/svg/ws-black.svg');
-			}
-		}
+      a:nth-child(1)  {
+        background-image: url('../../../../src/assets/svg/instagram-black.svg');
+      }
+      a:nth-child(2) {
+        background-image: url('../../../../src/assets/svg/facebook-black.svg');
+      }
+      a:nth-child(3)  {
+        background-image: url('../../../../src/assets/svg/telegram-black.svg');
+      }
+      a:nth-child(4)  {
+        background-image: url('../../../../src/assets/svg/ws-black.svg');
+      }
 
-		.line {
-			background: white;
-			flex: 1;
-			width: 1px;
-		}
-	}
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 1;
-		background: linear-gradient(to right, white, transparent 75%, transparent 100%, white);
-	}
-	//background-size: contain;
-	&__wrapper {
-		width: $desktop;
-		margin: 0 auto;
-		position: relative;
-		z-index: 2;
-	}
-	&__title {
-		width: 800px;
-		margin-bottom: 60px;
+    }
 
-		h1 {
-			font-size: 48px;
-			font-weight: 500;
-		}
-		h2 {
-			font-size: 18px;
-		}
-	}
-	&__types-clean {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 35px;
-		width: 680px;
-	}
-	&__type {
-		background: #babeab;
-		padding: 22px;
-		border-radius: 5px;
-		transition: all 0.1s;
-		&:hover {
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-			cursor: pointer;
-		}
+    .line{
+      background: white;
+      flex: 1;
+      width: 1px;
+    }
+  }
 
-		.cost {
-			border-bottom: 1px solid #4f4d4a;
-			padding: 10px 0;
-			display: flex;
-			align-items: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to right, white, transparent 75%, transparent 100%, white);
 
-			mat-icon {
-				padding-left: 10px;
-			}
-		}
+  }
+  //background-size: contain;
+  &__wrapper {
+    width: $desktop;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  &__title{
+    width: 800px;
+    margin-bottom: 60px;
 
-		h3 {
-			font-size: 16px;
-			font-weight: bold;
-			margin: 0 0 10px;
-			text-transform: uppercase;
-		}
-	}
-	&__type:nth-child(2) {
-		background: #ffb800;
-	}
-	&__type:nth-child(3) {
-		background: #85a5a9;
-	}
-	&__type:nth-child(4) {
-		background: #a8cace;
-	}
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 18px;
+
+    }
+  }
+  &__types-clean{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    width: 680px;
+  }
+  &__type{
+    background: #BABEAB;
+    padding: 22px;
+    border-radius: 5px;
+    transition: all .1s;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      cursor: pointer;
+    }
+
+    .cost {
+      border-bottom: 1px solid #4F4D4A;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+
+      mat-icon{
+        padding-left: 10px;
+      }
+    }
+
+
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 10px;
+      text-transform: uppercase;
+    }
+  }
+  &__type:nth-child(2){
+    background: #FFB800;
+  }
+  &__type:nth-child(3){
+    background: #85A5A9;
+  }
+  &__type:nth-child(4){
+    background: #A8CACE;
+  }
 }
 
 @media (max-width: 1180px) {
-	.main-header {
-		padding: 25px 15px;
-		height: auto;
 
-		&:before {
-			background: linear-gradient(to right, white, transparent 130%, transparent 100%, white);
-		}
+  .main-header {
+    padding: 25px 15px;
+    height: auto;
 
-		&__social {
-			display: none;
-		}
-		&__wrapper {
-			width: 100%;
-		}
+    &:before{
+      background: linear-gradient(to right, white, transparent 130%, transparent 100%, white);
+    }
 
-		&__types-clean {
-			width: 100%;
-			gap: 10px;
-		}
+    &__social {
+      display: none;
+    }
+    &__wrapper {
+      width: 100%;
+    }
 
-		&__type {
-			padding: 10px;
-			text-align: center;
+    &__types-clean{
+      width: 100%;
+      gap: 10px;
+    }
 
-			h3 {
-				font-size: 13px;
-			}
-			.cost {
-				display: none;
-			}
-		}
+    &__type {
+      padding: 10px;
+      text-align: center;
 
-		&__title {
-			width: 100%;
-			margin-bottom: 20px;
-			h1 {
-				font-size: 20px;
-			}
-			h2 {
-				font-size: 13px;
-			}
-		}
-	}
+      h3{
+        font-size: 13px;
+      }
+      .cost {
+        display: none;
+      }
+    }
+
+    &__title{
+      width: 100%;
+      margin-bottom: 20px;
+      h1{
+        font-size: 20px;
+      }
+      h2{
+        font-size: 13px;
+      }
+
+    }
+  }
 }
