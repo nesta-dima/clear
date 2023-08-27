@@ -1,12 +1,13 @@
 @import '../../../styles/variables.scss';
 .questions-container {
+  padding-bottom: 120px;
 	position: relative;
 	margin: auto;
 	max-width: $desktop;
 	box-sizing: border-box;
 	@media (max-width: $desktop) {
-		padding: 0 15px;
-	}
+    padding: 0 15px 60px;
+  }
 }
 .questions-cell {
 	display: flex;
