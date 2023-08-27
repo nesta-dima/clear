@@ -7,7 +7,7 @@
 }
 .footer-label {
 	font-size: 36px;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 44px;
 	text-transform: uppercase;
 	margin-top: 0px;
@@ -20,11 +20,11 @@ footer {
 	display: flex;
 	box-sizing: border-box;
 	align-items: center;
-	width: 1180px;
+	width: $desktop;
 	max-width: 100%;
 	margin: 0 auto;
 	justify-content: space-between;
-	@media (max-width: 1180px) {
+	@media (max-width: $desktop) {
 		flex-wrap: wrap;
 		gap: 55px;
 		justify-content: unset;
