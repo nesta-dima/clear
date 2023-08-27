@@ -21,8 +21,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, MainHeaderComponent, AboutCompanyComponent, CalculatePriceComponent, SocialMediaComponent],
+declarations: [
+		AppComponent,
+		HeaderComponent,
+		MainHeaderComponent,
+		AboutCompanyComponent,
+		CalculatePriceComponent,
+    SocialMediaComponent,
+		FooterComponent,
+	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
