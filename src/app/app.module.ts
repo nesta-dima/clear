@@ -20,6 +20,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
@@ -29,6 +30,7 @@ declarations: [
 		MainHeaderComponent,
 		AboutCompanyComponent,
 		CalculatePriceComponent,
+    QuestionsComponent,
     SocialMediaComponent,
 		FooterComponent,
 	],
