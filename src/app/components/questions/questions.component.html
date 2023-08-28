@@ -1,0 +1,25 @@
+<section class="questions">
+	<div class="questions__title">часто задаваемые <span>вопросы</span></div>
+	<div class="questions__desktop" *ngIf="isDesktop; else mobile">
+		<div class="questions__cell" *ngFor="let item of questions">
+			<img class="questions__grid-img" src="../../../assets/svg/question-circle.svg" alt="question" />
+			<div>
+				<h3>{{item.title}}</h3>
+				<p>{{item.description}}</p>
+			</div>
+		</div>
+	</div>
+	<p class="questions__subtitle">
+		Если вы не нашли ответ на свой вопрос,<a href="/"> свяжитесь с нами</a>, и мы с радостью Вам ответим.
+	</p>
+	<img class="questions__bubble" src="../../../assets/svg/bubble.svg" alt="bubble" />
+</section>
+
+<ng-template #mobile>
+  <div class="questions__cell-mobile" *ngFor="let item of questions">
+    <details>
+      <summary>{{item.title}}</summary>
+      <p>{{item.description}}</p>
+    </details>
+  </div>
+</ng-template>

@@ -65,56 +65,160 @@ footer {
 	align-items: center;
 	gap: 15px;
 
-	img {
-		width: 30px;
-		height: 30px;
-	}
-}
-.footer-image {
-	border-radius: 5px;
-	width: 385px;
-	height: 317px;
-	background-image: url(../../../assets//images/footer.png);
-	@media (max-width: $desktop) {
-		display: none;
-	}
+.footer {
+  overflow: hidden;
+  padding-bottom: 200px;
+  @media (max-width: $desktop) {
+    padding-bottom: 50px;
+  }
+
+  &__wrapper{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: $desktop;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    @media (max-width: $desktop) {
+      flex-wrap: wrap;
+      gap: 55px;
+      justify-content: unset;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+  }
+
+  &__image {
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 385px;
+    height: 317px;
+    background-image: url("../../../assets/images/footer.png");
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &__contact {
+    @media (max-width: $desktop) {
+      width: 100%;
+    }
+  }
+
+  &__requisites {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bubble {
+    z-index: -1;
+    position: absolute;
+    width: 315px;
+    height: 348px;
+    background-image: url("../../../assets/svg/bubble.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -213px;
+    bottom: -242px;
+    @media (max-width: $desktop) {
+      right: -120px;
+      bottom: -80px;
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: $black;
+    @media (max-width: $desktop) {
+      font-size: 24px;
+    }
+
+    span {
+      color: $light-green;
+    }
+  }
+
+  &__wrapper-contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    img {
+      text-decoration: none;
+      width: 40px;
+      height: 40px;
+    }
+    p,
+    a {
+      text-decoration: none;
+      color: $black;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 400;
+      @media (max-width: $desktop) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__wrapper-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a{
+      width: 30px;
+      height: 30px;
+      background: no-repeat center $black;
+      border-radius: 50%;
+    }
+
+    a:nth-child(1) {
+      background-image: url("../../../assets/svg/instagram.svg");
+    }
+    a:nth-child(2) {
+      background-image: url("../../../assets/svg/facebook.svg");
+    }
+    a:nth-child(3) {
+      background-image: url("../../../assets/svg/telegram.svg");
+    }
+    a:nth-child(4) {
+      background-image: url("../../../assets/svg/ws.svg");
+    }
+  }
+
+  &__wrapper-requisites{
+    margin-bottom: 10px;
+    p {
+      margin: 0;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 23.5px;
+      @media (max-width: $desktop) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__requisites-link{
+    text-decoration: none;
+    color: $light-green;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    transition: all 0.3s;
+    @media (max-width: $desktop) {
+      font-size: 15px;
+    }
+  }
 }
 
-.footer-requisites {
-	max-width: 380px;
-	display: flex;
-	flex-direction: column;
-}
-
-.footer-requisites-link {
-	text-decoration: none;
-	color: $light-green;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
-	@media (max-width: $desktop) {
-		font-size: 15px;
-	}
-}
-.requisites-wrapper {
-	margin-bottom: 8px;
-}
-.requisites-wrapper p {
-	margin: 0px;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 23.5px;
-	@media (max-width: $desktop) {
-		font-size: 15px;
-	}
-}
-.bubble {
-	position: absolute;
-	right: -15%;
-	bottom: -42%;
-	@media (max-width: $desktop) {
-		display: none;
-	}
-}

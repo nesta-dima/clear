@@ -1,0 +1,153 @@
+@import '../../../styles/variables.scss';
+.questions {
+  padding-bottom: 120px;
+	position: relative;
+	margin: auto;
+	max-width: $desktop;
+	box-sizing: border-box;
+	@media (max-width: $desktop) {
+    padding: 0 15px 60px;
+  }
+
+  &__title{
+    color: $black;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 44px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @media (max-width: $desktop) {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    span{
+      color: $light-green;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 44px;
+      text-transform: uppercase;
+      @media (max-width: $desktop) {
+        color: $light-green;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__subtitle{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-top: 32px;
+    & > a {
+      color: $light-green;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      text-decoration: none;
+    }
+  }
+  &__bubble{
+    position: absolute;
+    right: 190px;
+    bottom: 100px;
+    z-index: -1;
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+  &__desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, auto);
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    grid-auto-rows: minmax(auto, 1fr);
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+  &__cell-mobile {
+    display: none;
+    p {
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26.5px;
+    }
+    @media (max-width: $desktop) {
+      display: flex;
+    }
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+
+      &::after {
+        content: url(../../../assets/svg/arrowUp.svg);
+        margin: 10px;
+      }
+    }
+
+    details{
+      width: 100%;
+      border-bottom: 1px solid $black;
+      padding: 15px 0;
+    }
+    details[open] summary:after {
+      rotate: 180deg;
+      margin: 10px;
+      content: url(../../../assets/svg/arrowUp.svg);
+    }
+
+  }
+  &__cell {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $desktop) {
+      display: none;
+    }
+    h3 {
+      font-size: 20px;
+      font-style: normal;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      margin-top: 0;
+    }
+
+    p{
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26.5px;
+      margin: 10px 0;
+    }
+  }
+  &__grid-img {
+    width: 25px;
+    height: 25px;
+  }
+
+}
+
+
+
+
