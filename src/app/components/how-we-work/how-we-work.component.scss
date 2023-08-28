@@ -32,6 +32,10 @@
 	display: flex;
 	gap: 22px;
 	margin-bottom: 71px;
+	@media (max-width: $desktop) {
+		margin-bottom: 50px;
+		overflow: scroll;
+	}
 }
 .howWork-road-cell-container {
 	display: flex;
@@ -79,6 +83,9 @@
 	display: flex;
 	gap: 70px;
 	margin-bottom: 133px;
+	@media (max-width: $desktop) {
+		margin-bottom: 55px;
+	}
 }
 .howWork-preview-image {
 	display: flex;
@@ -132,6 +139,7 @@
 		text-transform: uppercase;
 		@media (max-width: $desktop) {
 			font-size: 20px;
+			margin-top: 0;
 		}
 	}
 	span {
