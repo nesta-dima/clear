@@ -8,6 +8,20 @@
 		padding: 0 15px;
 	}
 }
+.howWork__bubble {
+	z-index: -1;
+	position: absolute;
+	width: 315px;
+	height: 348px;
+	background-image: url('../../../assets/svg/bubble.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	right: 36%;
+
+	@media (max-width: $desktop) {
+		display: none;
+	}
+}
 .howWork-container-label_dark {
 	color: $black;
 }
