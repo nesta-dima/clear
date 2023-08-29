@@ -1,6 +1,6 @@
 @import '../../../styles/variables.scss';
 
-.howWork-container {
+.work {
 	margin-bottom: 134px;
 	margin: 0 auto;
 	max-width: $desktop;
@@ -8,7 +8,7 @@
 		padding: 0 15px;
 	}
 }
-.howWork__bubble {
+.work__bubble {
 	z-index: -1;
 	position: absolute;
 	width: 315px;
@@ -17,18 +17,17 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	right: 36%;
-
 	@media (max-width: $desktop) {
 		display: none;
 	}
 }
-.howWork-container-label_dark {
+.work__title_dark {
 	color: $black;
 }
-.howWork-container-label_light {
+.work__title_light {
 	color: $light-green;
 }
-.howWork-container-label {
+.work__title {
 	font-size: 36px;
 	font-weight: bold;
 	line-height: 44px;
@@ -42,7 +41,7 @@
 		text-transform: uppercase;
 	}
 }
-.howWork-road {
+.work__road {
 	display: flex;
 	gap: 22px;
 	margin-bottom: 71px;
@@ -53,20 +52,35 @@
 		padding-bottom: 13px;
 	}
 }
-.howWork-road-cell-container {
+.work__road__container {
 	display: flex;
 	flex-direction: column;
 	width: 183px;
 	height: 125px;
+
+	padding: 3px;
 	@media (max-width: $desktop) {
 		flex-direction: row;
 		min-width: 150px;
 		height: 60px;
 		align-items: flex-start;
 		gap: 5px;
+		background-color: rgba(#fff, 0.5);
+		border-radius: 5px;
+	}
+	p {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+		@media (max-width: $desktop) {
+			font-family: Greycliff CF;
+			font-size: 14px;
+			margin: 0px;
+		}
 	}
 }
-.howWork-road-cell {
+.work__road__cell {
 	display: flex;
 	gap: 34px;
 	align-items: center;
@@ -97,12 +111,13 @@
 			width: 22px;
 			height: 22px;
 			color: $black;
-			font-size: 14px;
 			font-style: normal;
 			font-weight: 400;
 			line-height: 20px;
 			border: none;
 			background: none;
+			text-align: center;
+			font-size: 16px;
 		}
 		span {
 			display: none;
@@ -110,19 +125,7 @@
 	}
 }
 
-.howWork-road-cell-label {
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
-	@media (max-width: $desktop) {
-		font-family: Greycliff CF;
-		font-size: 14px;
-		margin: 0px;
-	}
-}
-
-.howWork-preview-container {
+.work__preview {
 	display: flex;
 	gap: 70px;
 	margin-bottom: 133px;
@@ -130,7 +133,7 @@
 		margin-bottom: 55px;
 	}
 }
-.howWork-preview-image {
+.work__image {
 	display: flex;
 	gap: 35px;
 	@media (max-width: $desktop) {
@@ -138,41 +141,44 @@
 	}
 }
 
-.howWork-grid-column1 {
+.work__image__grid-column1 {
 	display: flex;
 	width: 173px;
 	gap: 15px;
 	flex-direction: column;
 }
-.howWork-grid-column1-bg {
+.work__image__grid-column1-bg {
 	width: 173px;
 	height: 125px;
 	background-color: $light-green;
 	border-radius: 5px;
 }
-.howWork-grid-column1-img {
+.work__image__grid-column1-img {
 	width: 173px;
 	height: 210px;
 	background-image: url(../../../assets/images/work1.png);
 }
-.howWork-grid-column2 {
+.work__image__grid-column2 {
 	display: flex;
 	width: 173px;
 	gap: 15px;
 	flex-direction: column;
 }
-.howWork-grid-column2-bg {
+.work__image__grid-column2-bg {
 	width: 210px;
 	height: 75px;
 	background-color: $light-green;
 	border-radius: 5px;
 }
-.howWork-grid-column2-img {
+.work__image__grid-column2-img {
 	width: 210px;
 	height: 260px;
 	background-image: url(../../../assets/images/work2.png);
 }
-.howWork-preview-infonmation {
+.work__option {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	p {
 		color: $black;
 		font-size: 36px;
@@ -181,7 +187,7 @@
 		line-height: normal;
 		text-transform: uppercase;
 		@media (max-width: $desktop) {
-			font-size: 20px;
+			font-size: 18px;
 			margin-top: 0;
 		}
 	}
@@ -198,7 +204,7 @@
 	}
 }
 
-.howWork-preview-form {
+.work__option__form {
 	p {
 		font-size: 15px;
 		font-style: normal;
@@ -206,7 +212,7 @@
 		line-height: 12px;
 	}
 }
-.howWork-button-container {
+.work__button__container {
 	display: flex;
 	gap: 10px;
 	align-items: flex-end;
@@ -218,7 +224,7 @@
 	}
 }
 
-.col-3 {
+.work__input {
 	float: left;
 	position: relative;
 	width: 210px;
@@ -226,11 +232,11 @@
 		width: 100%;
 	}
 }
-.effect-16:focus {
+.work__preview__input__effect:focus {
 	outline: none;
 	height: 50px;
 }
-.effect-16 {
+.work__preview__input__effect {
 	border: 0;
 	border-bottom: 1px solid #ccc;
 	border-radius: 5px 5px 0px 0px;
@@ -247,7 +253,7 @@
 	letter-spacing: 1px;
 	border: none;
 }
-.effect-16 ~ .focus-border {
+.work__preview__input__effect ~ .work__preview__focus-border {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -257,12 +263,12 @@
 	background-color: $light-green;
 	transition: 0.4s;
 }
-.effect-16:focus ~ .focus-border,
-.has-content.effect-16 ~ .focus-border {
+.work__preview__input__effect:focus ~ .work__preview__focus-border,
+.has-content.effect-16 ~ .work__preview__focus-border {
 	width: 100%;
 	transition: 0.4s;
 }
-.effect-16 ~ label {
+.work__preview__input__effect ~ label {
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -272,8 +278,8 @@
 	z-index: -1;
 	letter-spacing: 0.5px;
 }
-.effect-16:focus ~ label,
-.has-content.effect-16 ~ label {
+.work__preview__input__effect:focus ~ label,
+.has-content.work__preview__input__effect ~ label {
 	top: 4px;
 	font-size: 12px;
 	color: #85a5a9;
@@ -281,22 +287,17 @@
 	z-index: 1;
 	left: 4px;
 }
-.input-effect .effect-16:focus {
+.input-effect .work__preview__input__effect:focus {
 	border-radius: 5px 5px 0px 0px;
 	background: #d9d9d9;
 }
-// .input-effect .effect-16 {
-// 	border-radius: 5px 5px 0px 0px;
-// 	background: $white;
-// }
-.howWork-button {
+.work__preview__button {
 	width: 250px;
 	height: 50px;
 	gap: 10px;
 	border-radius: 5px;
 	background: #c45645;
 	color: #f5f5f5;
-	font-family: Inter;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 500;
