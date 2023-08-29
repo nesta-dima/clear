@@ -24,17 +24,23 @@ import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { InfoclearComponent } from './components/infoclear/infoclear.component';
+import { RootComponent } from './page/root/root.component';
+import { NotExistComponent } from './page/not-exist/not-exist.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
-declarations: [
+	declarations: [
 		AppComponent,
 		HeaderComponent,
 		MainHeaderComponent,
 		AboutCompanyComponent,
 		CalculatePriceComponent,
-    QuestionsComponent,
-    SocialMediaComponent,
+		QuestionsComponent,
+		SocialMediaComponent,
 		FooterComponent,
-  InfoclearComponent,
+		InfoclearComponent,
+		RootComponent,
+		NotExistComponent,
+		// RequestCallComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -52,6 +58,7 @@ declarations: [
 		MatFormFieldModule,
 		MatSelectModule,
 		ReactiveFormsModule,
+		MatDialogModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],
