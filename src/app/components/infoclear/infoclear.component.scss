@@ -1,0 +1,71 @@
+@import '../../../styles/variables.scss';
+.cleanInfo {
+	max-width: $desktop;
+	margin: auto;
+	& > p {
+		color: $black;
+		font-size: 24px;
+		font-weight: 800;
+		line-height: 44px;
+		text-transform: uppercase;
+		& > span {
+			color: $light-green;
+			font-size: 24px;
+			font-weight: 800;
+			line-height: 44px;
+			text-transform: uppercase;
+		}
+	}
+	&-options {
+		& > p {
+			color: $black;
+			font-size: 24px;
+			font-weight: 800;
+			line-height: 44px;
+			text-transform: uppercase;
+			& > div > span {
+				color: $light-green;
+				font-size: 24px;
+				font-weight: 800;
+				line-height: 44px;
+				text-transform: uppercase;
+			}
+		}
+		& > div > button {
+			display: flex;
+			justify-content: space-between;
+		}
+		& > div > button {
+			display: flex;
+			height: 50px;
+			padding: 25px;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			border-radius: 5px;
+			background: $yellow;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 44px;
+			border: none;
+			margin-bottom: 55px;
+		}
+	}
+	&-options_button-container {
+		button {
+			height: 50px;
+			padding: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+			border: 1px solid $black;
+			color: $black;
+			font-size: 26px;
+			font-weight: 400;
+			line-height: 44px;
+			margin-bottom: 10px;
+		}
+	}
+}

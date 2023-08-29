@@ -23,6 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InfoclearComponent } from './components/infoclear/infoclear.component';
 @NgModule({
 declarations: [
 		AppComponent,
@@ -33,6 +34,7 @@ declarations: [
     QuestionsComponent,
     SocialMediaComponent,
 		FooterComponent,
+  InfoclearComponent,
 	],
 	imports: [
 		BrowserModule,
