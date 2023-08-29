@@ -49,6 +49,8 @@
 	@media (max-width: $desktop) {
 		margin-bottom: 50px;
 		overflow: scroll;
+		gap: 15px;
+		padding-bottom: 13px;
 	}
 }
 .howWork-road-cell-container {
@@ -56,6 +58,13 @@
 	flex-direction: column;
 	width: 183px;
 	height: 125px;
+	@media (max-width: $desktop) {
+		flex-direction: row;
+		min-width: 150px;
+		height: 60px;
+		align-items: flex-start;
+		gap: 5px;
+	}
 }
 .howWork-road-cell {
 	display: flex;
@@ -76,20 +85,40 @@
 		height: 50px;
 		margin: 0;
 	}
+	span {
+		border-bottom: 1px solid $light-green;
+		display: block;
+		width: 77px;
+		height: 1px;
+	}
+	@media (max-width: $desktop) {
+		p {
+			font-family: Greycliff CF;
+			width: 22px;
+			height: 22px;
+			color: $black;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 20px;
+			border: none;
+			background: none;
+		}
+		span {
+			display: none;
+		}
+	}
 }
-.howWork-road-cell-line {
-	border-bottom: 1px solid $light-green;
-	display: block;
-	width: 77px;
-	height: 1px;
-}
+
 .howWork-road-cell-label {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 20px;
 	@media (max-width: $desktop) {
+		font-family: Greycliff CF;
 		font-size: 14px;
+		margin: 0px;
 	}
 }
 
