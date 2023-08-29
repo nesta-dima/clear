@@ -20,7 +20,7 @@
     </div>
     <button mat-button class="call">Заказать звонок</button>
     <button mat-icon-button class="btn" aria-label="Menu" (click)="openMenu()">
-      <mat-icon>menu</mat-icon>
+      <mat-icon> {{isOpen ? 'close' : 'menu' }}</mat-icon>
     </button>
   </div>
 </div>
