@@ -23,10 +23,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -37,10 +37,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 		QuestionsComponent,
 		SocialMediaComponent,
 		FooterComponent,
-		HowWeWorkComponent,
 		RootComponent,
 		NotExistComponent,
-		// RequestCallComponent,
+		HowWeWorkComponent,
 	],
 	imports: [
 		BrowserModule,
