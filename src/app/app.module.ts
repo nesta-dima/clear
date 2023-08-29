@@ -25,6 +25,7 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
 import { FooterComponent } from './components/footer/footer.component';
 import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -37,6 +38,7 @@ import { NotExistComponent } from './page/not-exist/not-exist.component';
 		FooterComponent,
 		RootComponent,
 		NotExistComponent,
+		// RequestCallComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -54,6 +56,7 @@ import { NotExistComponent } from './page/not-exist/not-exist.component';
 		MatFormFieldModule,
 		MatSelectModule,
 		ReactiveFormsModule,
+		MatDialogModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],

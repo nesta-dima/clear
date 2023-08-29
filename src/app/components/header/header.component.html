@@ -18,7 +18,7 @@
       <mat-icon> phone</mat-icon>
       <a href="tel:+455-440-440">455-440-440</a>
     </div>
-    <button mat-button class="call">Заказать звонок</button>
+    <button mat-button class="call" (click)="openModal()">Заказать звонок</button>
     <button mat-icon-button class="btn" aria-label="Menu" (click)="openMenu()">
       <mat-icon> {{isOpen ? 'close' : 'menu' }}</mat-icon>
     </button>
@@ -29,12 +29,11 @@
     <a class="phone" href="tel:+455-440-440">
       <button mat-button ><mat-icon>phone</mat-icon> 455-440-440</button>
     </a>
-    <button mat-button class="call">Заказать звонок</button>
+    <button mat-button class="call" (click)="openModal()">Заказать звонок</button>
     <ul class="mobile-menu__social">
-      <a href="/"><li></li></a>
-      <a href="/"><li></li></a>
-      <a href="/"><li></li></a>
-      <a href="/"><li></li></a>
+      <ng-container *ngFor="let link of links">
+        <a [href]="link" target="_blank" ><li></li></a>
+      </ng-container>
     </ul>
     <div class="mobile-menu__block">
       <div class="mobile-menu__block-title">УСЛУГИ</div>
