@@ -2,11 +2,7 @@
   <div class="wrapper">
     <div class="title"><span>Расчёт стоимости </span>клининговых услуг</div>
     <ul class="price__type-clean">
-      <li><span>поддерживающая уборка</span></li>
-      <li><span>генеральная уборка</span></li>
-      <li><span>химчистка</span></li>
-      <li><span>мойка окон</span></li>
-      <li><span>отличия генеральной уборки от поддерживающей</span></li>
+      <li *ngFor="let element of typesClean" (click)="openDialog(element)"><span>{{element.title}}</span></li>
     </ul>
     <div class="block">
       <div>
@@ -67,3 +63,5 @@
     <mat-checkbox class="example-margin" [(ngModel)]="key3">Взять на уборку пылесос</mat-checkbox>
   </div>
 </div>
+
+

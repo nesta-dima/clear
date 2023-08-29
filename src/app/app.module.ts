@@ -23,16 +23,24 @@ import { MatSelectModule } from '@angular/material/select';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogOverviewExampleDialogComponent } from './components/calculate-price/dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+import { GeneralCleanComponent } from './components/calculate-price/typesClean/general-clean/general-clean.component';
+import { MaintenanceCleanComponent } from './components/calculate-price/typesClean/maintenance-clean/maintenance-clean.component';
+// import {MatDialogModule} from "@angular/material/dialog";
 @NgModule({
-declarations: [
+	declarations: [
 		AppComponent,
 		HeaderComponent,
 		MainHeaderComponent,
 		AboutCompanyComponent,
 		CalculatePriceComponent,
-    QuestionsComponent,
-    SocialMediaComponent,
+		QuestionsComponent,
+		SocialMediaComponent,
 		FooterComponent,
+  DialogOverviewExampleDialogComponent,
+  GeneralCleanComponent,
+  MaintenanceCleanComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -50,6 +58,8 @@ declarations: [
 		MatFormFieldModule,
 		MatSelectModule,
 		ReactiveFormsModule,
+		MatDialogModule,
+		// MatDialogModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],
