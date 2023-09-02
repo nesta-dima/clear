@@ -2,21 +2,19 @@
   <div class="header__wrapper" >
     <div class="header__logo">
       <a href="/">
-        <img src="./assets/images/logo.png" alt="LA CLEAN"/>
+        <img src="/assets/images/logo.png" alt="LA CLEAN"/>
       </a>
       <div><span>Профессиональные<br /> клининговые услуги</span></div>
     </div>
     <ul class="header__menu">
-      <li>
-        УСЛУГИ
-      </li>
-      <li>О НАС</li>
-      <li>КОНТАКТЫ</li>
+      <li (click)="onClickScroll('price')">УСЛУГИ</li>
+      <li (click)="onClickScroll('company')">О НАС</li>
+      <li (click)="onClickScroll('footer')">КОНТАКТЫ</li>
       <li>НАШИ РАБОТЫ</li>
     </ul>
     <div class="header__phone">
       <mat-icon> phone</mat-icon>
-      <a href="tel:+455-440-440">455-440-440</a>
+      <a href="tel:{{SOCIAL.PHONE}}">{{SOCIAL.PHONE}}</a>
     </div>
     <button mat-button class="call" (click)="openModal()">Заказать звонок</button>
     <button mat-icon-button class="btn" aria-label="Menu" (click)="openMenu()">
@@ -26,8 +24,8 @@
 </div>
 <div *ngIf="isOpen" class="mobile-menu">
   <div class="wrapper">
-    <a class="phone" href="tel:+455-440-440">
-      <button mat-button ><mat-icon>phone</mat-icon> 455-440-440</button>
+    <a class="phone" href="tel:{{SOCIAL.PHONE}}">
+      <button mat-button ><mat-icon>phone</mat-icon>{{SOCIAL.PHONE}}</button>
     </a>
     <button mat-button class="call" (click)="openModal()">Заказать звонок</button>
     <ul class="mobile-menu__social">
@@ -37,24 +35,24 @@
     </ul>
     <div class="mobile-menu__block">
       <div class="mobile-menu__block-title">УСЛУГИ</div>
-      <ul class="mobile-menu__block-option">
-        <a href="/"><li>Генеральная уборка</li></a>
-        <a href="/"><li>Поддерживающая уборка</li></a>
-        <a href="/"><li>Мытье окон</li></a>
-        <a href="/"><li>Химчистка</li></a>
+      <ul class="mobile-menu__block-option" >
+        <li (click)="onClickScroll('price')">Генеральная уборка</li>
+        <li (click)="onClickScroll('price')">Поддерживающая уборка</li>
+        <li (click)="onClickScroll('price')">Мытье окон</li>
+        <li (click)="onClickScroll('price')">Химчистка</li>
       </ul>
     </div>
     <div class="mobile-menu__block">
       <div class="mobile-menu__block-title">О НАС</div>
       <ul class="mobile-menu__block-option">
-        <a href="/"><li>Информация о компании</li></a>
-        <a href="/"><li>Расчет стоимости услуг</li></a>
-        <a href="/"><li>популярные вопросы</li></a>
-        <a href="/"><li>Отзывы</li></a>
+        <li (click)="onClickScroll('company')">Информация о компании</li>
+        <li (click)="onClickScroll('price')">Расчет стоимости услуг</li>
+        <li>популярные вопросы</li>
+        <li>Отзывы</li>
       </ul>
     </div>
-    <div class="mobile-menu__block">
-      <div class="mobile-menu__block-title">КОНТАКТЫ</div>
+    <div class="mobile-menu__block" (click)="onClickScroll('footer')">
+      <div class="mobile-menu__block-title" (click)="onClickScroll('footer')">КОНТАКТЫ</div>
     </div>
     <div class="mobile-menu__block">
       <div class="mobile-menu__block-title">НАШИ РАБОТЫ</div>
