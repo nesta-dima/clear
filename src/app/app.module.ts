@@ -28,6 +28,7 @@ import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
+import { ResultSliderComponent } from './components/result-slider/result-slider.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -41,6 +42,7 @@ import { ClearSliderComponent } from './components/clear-slider/clear-slider.com
 		RootComponent,
 		NotExistComponent,
 		ClearSliderComponent,
+		ResultSliderComponent,
 	],
 	imports: [
 		BrowserModule,
