@@ -5,6 +5,9 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
 import { GeneralCleanComponent } from './typesClean/general-clean/general-clean.component';
 import { DialogData } from './calculate-price.interface';
 import { MaintenanceCleanComponent } from './typesClean/maintenance-clean/maintenance-clean.component';
+import { DryCleanComponent } from './typesClean/dry-clean/dry-clean.component';
+import { WindowCleanComponent } from './typesClean/window-clean/window-clean.component';
+import { DifferentCleanComponent } from './typesClean/different-clean/different-clean.component';
 
 @Component({
 	selector: 'app-calculate-price',
@@ -14,29 +17,24 @@ import { MaintenanceCleanComponent } from './typesClean/maintenance-clean/mainte
 export class CalculatePriceComponent {
 	typesClean = [
 		{
-			title: 'поддерживающая уборка',
-			subTitle: 'Тип удаляемых загрязнений: легкие, средние',
+			title: 'Поддерживающая уборка',
+			component: MaintenanceCleanComponent,
+		},
+		{
+			title: 'Генеральная уборка',
 			component: GeneralCleanComponent,
 		},
 		{
-			title: 'генеральная уборка',
-			subTitle: 'Тип удаляемых загрязнений: легкие, средние',
-			component: GeneralCleanComponent,
+			title: 'Химчистка',
+			component: DryCleanComponent,
 		},
 		{
-			title: 'поддерживающая уборка',
-			subTitle: 'Тип удаляемых загрязнений: легкие, средние',
-			component: GeneralCleanComponent,
+			title: 'Мойка окон',
+			component: WindowCleanComponent,
 		},
 		{
-			title: 'поддерживающая уборка',
-			subTitle: 'Тип удаляемых загрязнений: легкие, средние',
-			component: GeneralCleanComponent,
-		},
-		{
-			title: 'поддерживающая уборка',
-			subTitle: 'Тип удаляемых загрязнений: легкие, средние',
-			component: GeneralCleanComponent,
+			title: 'Oтличия генеральной уборки от поддерживающей',
+			component: DifferentCleanComponent,
 		},
 	];
 	flat: any;
@@ -71,16 +69,8 @@ export class CalculatePriceComponent {
 
 	constructor(public dialog: MatDialog) {}
 	openDialog(item: any): void {
-		console.log('item.title', item);
-		if (item.title === 'поддерживающая уборка') {
-			const dialogRef = this.dialog.open(MaintenanceCleanComponent, {
-				width: '90%',
-			});
-		}
-		if (item.title === 'генеральная уборка') {
-			const dialogRef = this.dialog.open(GeneralCleanComponent, {
-				width: '90%',
-			});
-		}
+		const dialogRef = this.dialog.open(item.component, {
+			width: '90%',
+		});
 	}
 }

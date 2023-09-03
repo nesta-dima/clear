@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CalculatePriceComponent } from './calculate-price.component';
+import { DifferentCleanComponent } from './different-clean.component';
 
-describe('CalculatePriceComponent', () => {
-  let component: CalculatePriceComponent;
-  let fixture: ComponentFixture<CalculatePriceComponent>;
+describe('DifferentCleanComponent', () => {
+  let component: DifferentCleanComponent;
+  let fixture: ComponentFixture<DifferentCleanComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CalculatePriceComponent ]
+      declarations: [ DifferentCleanComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CalculatePriceComponent);
+    fixture = TestBed.createComponent(DifferentCleanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

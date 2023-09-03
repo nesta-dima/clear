@@ -32,6 +32,9 @@ import { ResultSliderComponent } from './components/result-slider/result-slider.
 import { DialogOverviewExampleDialogComponent } from './components/calculate-price/dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { GeneralCleanComponent } from './components/calculate-price/typesClean/general-clean/general-clean.component';
 import { MaintenanceCleanComponent } from './components/calculate-price/typesClean/maintenance-clean/maintenance-clean.component';
+import { DryCleanComponent } from './components/calculate-price/typesClean/dry-clean/dry-clean.component';
+import { WindowCleanComponent } from './components/calculate-price/typesClean/window-clean/window-clean.component';
+import { DifferentCleanComponent } from './components/calculate-price/typesClean/different-clean/different-clean.component';
 
 @NgModule({
 	declarations: [
@@ -50,6 +53,9 @@ import { MaintenanceCleanComponent } from './components/calculate-price/typesCle
     DialogOverviewExampleDialogComponent,
     GeneralCleanComponent,
     MaintenanceCleanComponent,
+    DryCleanComponent,
+    WindowCleanComponent,
+    DifferentCleanComponent,
 	],
 	imports: [
 		BrowserModule,
