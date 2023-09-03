@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CalculatePriceComponent } from './calculate-price.component';
+import { GeneralCleanComponent } from './general-clean.component';
 
-describe('CalculatePriceComponent', () => {
-  let component: CalculatePriceComponent;
-  let fixture: ComponentFixture<CalculatePriceComponent>;
+describe('GeneralCleanComponent', () => {
+  let component: GeneralCleanComponent;
+  let fixture: ComponentFixture<GeneralCleanComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CalculatePriceComponent ]
+      declarations: [ GeneralCleanComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CalculatePriceComponent);
+    fixture = TestBed.createComponent(GeneralCleanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
