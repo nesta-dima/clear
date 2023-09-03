@@ -10,7 +10,7 @@
       <li (click)="onClickScroll('price')">УСЛУГИ</li>
       <li (click)="onClickScroll('company')">О НАС</li>
       <li (click)="onClickScroll('footer')">КОНТАКТЫ</li>
-      <li>НАШИ РАБОТЫ</li>
+      <li (click)="onClickScroll('clean')">НАШИ РАБОТЫ</li>
     </ul>
     <div class="header__phone">
       <mat-icon> phone</mat-icon>
@@ -48,7 +48,7 @@
         <li (click)="onClickScroll('company')">Информация о компании</li>
         <li (click)="onClickScroll('price')">Расчет стоимости услуг</li>
         <li>популярные вопросы</li>
-        <li>Отзывы</li>
+        <li (click)="onClickScroll('clean')">Отзывы</li>
       </ul>
     </div>
     <div class="mobile-menu__block" (click)="onClickScroll('footer')">
