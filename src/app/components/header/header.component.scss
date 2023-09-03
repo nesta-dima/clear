@@ -55,10 +55,26 @@
     list-style-type: none;
 
     & li {
-      font-family: 'Greycliff CF Bold', sans-serif;
       font-size: 14px;
       font-weight: bold;
-      cursor: pointer;
+
+
+      &:hover {
+        cursor: pointer;
+        &:after {
+          transform: scale(1);
+        }
+      }
+
+      &:after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: block;
+        background: $light-green;
+        transform: scale(0);
+        transition: all 0.3s;
+      }
     }
     & li:not(:last-child){
       margin-right: 30px;
