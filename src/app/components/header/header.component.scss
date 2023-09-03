@@ -58,6 +58,7 @@
       font-family: 'Greycliff CF Bold', sans-serif;
       font-size: 14px;
       font-weight: bold;
+      cursor: pointer;
     }
     & li:not(:last-child){
       margin-right: 30px;
@@ -100,15 +101,13 @@
       margin: 0;
       padding: 0;
       list-style-type: none;
+      color: #4F4D4A;
 
-      a{
-        text-decoration: none;
-        color: #4F4D4A;
-        li {
-          border-bottom: 1px solid rgba(#515151,0.5);
-          padding: 10px 0;
-          font-weight: bold;
-        }
+      li {
+        border-bottom: 1px solid rgba(#515151,0.5);
+        padding: 10px 0;
+        font-weight: bold;
+
       }
     }
   }

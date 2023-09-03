@@ -23,11 +23,16 @@ import { MatSelectModule } from '@angular/material/select';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RootComponent } from './page/root/root.component';
+import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
+import { ResultSliderComponent } from './components/result-slider/result-slider.component';
 import { DialogOverviewExampleDialogComponent } from './components/calculate-price/dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { GeneralCleanComponent } from './components/calculate-price/typesClean/general-clean/general-clean.component';
 import { MaintenanceCleanComponent } from './components/calculate-price/typesClean/maintenance-clean/maintenance-clean.component';
-// import {MatDialogModule} from "@angular/material/dialog";
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -38,9 +43,13 @@ import { MaintenanceCleanComponent } from './components/calculate-price/typesCle
 		QuestionsComponent,
 		SocialMediaComponent,
 		FooterComponent,
-  DialogOverviewExampleDialogComponent,
-  GeneralCleanComponent,
-  MaintenanceCleanComponent,
+		RootComponent,
+		NotExistComponent,
+		ClearSliderComponent,
+		ResultSliderComponent,
+    DialogOverviewExampleDialogComponent,
+    GeneralCleanComponent,
+    MaintenanceCleanComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -59,7 +68,8 @@ import { MaintenanceCleanComponent } from './components/calculate-price/typesCle
 		MatSelectModule,
 		ReactiveFormsModule,
 		MatDialogModule,
-		// MatDialogModule,
+		NgImageSliderModule,
+		MatDialogModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],
