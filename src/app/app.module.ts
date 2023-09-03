@@ -29,7 +29,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
 import { ResultSliderComponent } from './components/result-slider/result-slider.component';
-import { DialogOverviewExampleDialogComponent } from './components/calculate-price/dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { GeneralCleanComponent } from './components/calculate-price/typesClean/general-clean/general-clean.component';
 import { MaintenanceCleanComponent } from './components/calculate-price/typesClean/maintenance-clean/maintenance-clean.component';
 import { DryCleanComponent } from './components/calculate-price/typesClean/dry-clean/dry-clean.component';
@@ -50,12 +49,11 @@ import { DifferentCleanComponent } from './components/calculate-price/typesClean
 		NotExistComponent,
 		ClearSliderComponent,
 		ResultSliderComponent,
-    DialogOverviewExampleDialogComponent,
-    GeneralCleanComponent,
-    MaintenanceCleanComponent,
-    DryCleanComponent,
-    WindowCleanComponent,
-    DifferentCleanComponent,
+		GeneralCleanComponent,
+		MaintenanceCleanComponent,
+		DryCleanComponent,
+		WindowCleanComponent,
+		DifferentCleanComponent,
 	],
 	imports: [
 		BrowserModule,

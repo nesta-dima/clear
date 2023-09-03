@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { GeneralCleanComponent } from './typesClean/general-clean/general-clean.component';
-import { DialogData } from './calculate-price.interface';
 import { MaintenanceCleanComponent } from './typesClean/maintenance-clean/maintenance-clean.component';
 import { DryCleanComponent } from './typesClean/dry-clean/dry-clean.component';
 import { WindowCleanComponent } from './typesClean/window-clean/window-clean.component';
@@ -69,7 +67,7 @@ export class CalculatePriceComponent {
 
 	constructor(public dialog: MatDialog) {}
 	openDialog(item: any): void {
-		const dialogRef = this.dialog.open(item.component, {
+		this.dialog.open(item.component, {
 			width: '90%',
 		});
 	}
