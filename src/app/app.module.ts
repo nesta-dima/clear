@@ -26,6 +26,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -38,7 +40,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 		FooterComponent,
 		RootComponent,
 		NotExistComponent,
-		// RequestCallComponent,
+		ClearSliderComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -57,6 +59,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 		MatSelectModule,
 		ReactiveFormsModule,
 		MatDialogModule,
+		NgImageSliderModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],
