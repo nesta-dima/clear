@@ -10,17 +10,20 @@
       align-items: center;
       width: 1180px;
       margin: 0 auto;
-      gap: 10px;
+      gap: 40px;
       position: relative;
 
       &:before{
         content: "";
-        background-image: url('../../../../src/assets/svg/bubble.svg');
+        background-image: url('/assets/svg/bubble.svg');
         width: 275px;
         height: 250px;
         position: absolute;
         top: -50px;
         left: -100px;
+        animation-name: bubble-company;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
       }
 
       @media (max-width: 1180px){
@@ -54,28 +57,28 @@
         background-repeat: no-repeat;
       }
       &:nth-child(1) .icon{
-        background-image: url('../../../../src/assets/svg/time.svg');
+        background-image: url('/assets/svg/time.svg');
       }
       &:nth-child(2) .icon{
-        background-image: url('../../../../src/assets/svg/experience.svg');
+        background-image: url('/assets/svg/experience.svg');
       }
       &:nth-child(3) .icon{
-        background-image: url('../../../../src/assets/svg/dogovor.svg');
+        background-image: url('/assets/svg/dogovor.svg');
       }
       &:nth-child(4) .icon{
-        background-image: url('../../../../src/assets/svg/money.svg');
+        background-image: url('/assets/svg/money.svg');
       }
       &:nth-child(5) .icon{
-        background-image: url('../../../../src/assets/svg/safe.svg');
+        background-image: url('/assets/svg/safe.svg');
       }
       &:nth-child(6) .icon{
-        background-image: url('../../../../src/assets/svg/process.svg');
+        background-image: url('/assets/svg/process.svg');
       }
       &:nth-child(7) .icon{
-        background-image: url('../../../../src/assets/svg/discount.svg');
+        background-image: url('/assets/svg/discount.svg');
       }
       &:nth-child(8) .icon{
-        background-image: url('../../../../src/assets/svg/circle-check-outline.svg');
+        background-image: url('/assets/svg/circle-check-outline.svg');
       }
     }
 
@@ -102,5 +105,16 @@
       }
 
     }
+  }
+}
+
+@keyframes bubble-company {
+  0% {
+    top: -50px;
+    left: -100px;
+  }
+  50% {
+    top: -30px;
+    left: -120px;
   }
 }
