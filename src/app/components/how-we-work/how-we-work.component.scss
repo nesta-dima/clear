@@ -7,7 +7,7 @@
 	@media (max-width: $desktop) {
 		padding: 0 15px;
 	}
-	.work__bubble {
+	&__bubble {
 		z-index: -1;
 		position: absolute;
 		width: 315px;
@@ -20,13 +20,13 @@
 			display: none;
 		}
 	}
-	.work__title-dark {
+	&__title-dark {
 		color: $black;
 	}
-	.work__title-light {
+	&__title-light {
 		color: $light-green;
 	}
-	.work__title {
+	&__title {
 		font-size: 36px;
 		font-weight: bold;
 		line-height: 44px;
@@ -40,7 +40,7 @@
 			text-transform: uppercase;
 		}
 	}
-	.work__road {
+	&__road {
 		display: flex;
 		gap: 22px;
 		margin-bottom: 71px;
@@ -50,79 +50,79 @@
 			gap: 15px;
 			padding-bottom: 13px;
 		}
-	}
-	.work__road__container {
-		display: flex;
-		flex-direction: column;
-		width: 183px;
-		height: 125px;
-
-		padding: 3px;
-		@media (max-width: $desktop) {
-			flex-direction: row;
-			min-width: 150px;
-			height: 60px;
-			align-items: flex-start;
-			gap: 5px;
-			background-color: rgba(#fff, 0.5);
-			border-radius: 5px;
-		}
-		p {
-			font-size: 16px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 20px;
-			@media (max-width: $desktop) {
-				font-size: 14px;
-				margin: 0;
-			}
-		}
-	}
-	.work__road__cell {
-		display: flex;
-		gap: 34px;
-		align-items: center;
-		p {
-			border-radius: 10px;
-			background: #fff;
+		&__container {
 			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: $black;
-			font-size: 24px;
-			font-style: normal;
-			font-weight: bold;
-			line-height: 20px;
-			width: 70px;
-			height: 50px;
-			margin: 0;
-		}
-		span {
-			border-bottom: 1px solid $light-green;
-			display: block;
-			width: 77px;
-			height: 1px;
-		}
-		@media (max-width: $desktop) {
+			flex-direction: column;
+			width: 183px;
+			height: 125px;
+
+			padding: 3px;
+			@media (max-width: $desktop) {
+				flex-direction: row;
+				min-width: 150px;
+				height: 60px;
+				align-items: flex-start;
+				gap: 5px;
+				background-color: rgba(#fff, 0.5);
+				border-radius: 5px;
+			}
 			p {
-				width: 22px;
-				height: 22px;
-				color: $black;
+				font-size: 16px;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 20px;
-				border: none;
-				background: none;
-				text-align: center;
-				font-size: 16px;
+				@media (max-width: $desktop) {
+					font-size: 14px;
+					margin: 0;
+				}
+			}
+		}
+		&__cell {
+			display: flex;
+			gap: 34px;
+			align-items: center;
+			p {
+				border-radius: 10px;
+				background: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $black;
+				font-size: 24px;
+				font-style: normal;
+				font-weight: bold;
+				line-height: 20px;
+				width: 70px;
+				height: 50px;
+				margin: 0;
 			}
 			span {
-				display: none;
+				border-bottom: 1px solid $light-green;
+				display: block;
+				width: 77px;
+				height: 1px;
+			}
+			@media (max-width: $desktop) {
+				p {
+					width: 22px;
+					height: 22px;
+					color: $black;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 20px;
+					border: none;
+					background: none;
+					text-align: center;
+					font-size: 16px;
+				}
+				span {
+					display: none;
+				}
 			}
 		}
 	}
 
-	.work__preview {
+	&__preview {
 		display: flex;
 		gap: 70px;
 		margin-bottom: 133px;
@@ -130,48 +130,48 @@
 			margin-bottom: 55px;
 		}
 	}
-	.work__image {
+	&__image {
 		display: flex;
 		gap: 35px;
 		@media (max-width: $desktop) {
 			display: none;
 		}
+		&__grid-column1 {
+			display: flex;
+			width: 173px;
+			gap: 15px;
+			flex-direction: column;
+		}
+		&__grid-column1-bg {
+			width: 173px;
+			height: 125px;
+			background-color: $light-green;
+			border-radius: 5px;
+		}
+		&__grid-column1-img {
+			width: 173px;
+			height: 210px;
+			background-image: url(../../../assets/images/kitchen-with-girl.png);
+		}
+		&__grid-column2 {
+			display: flex;
+			width: 173px;
+			gap: 15px;
+			flex-direction: column;
+		}
+		&__grid-column2-bg {
+			width: 210px;
+			height: 75px;
+			background-color: $light-green;
+			border-radius: 5px;
+		}
+		&__grid-column2-img {
+			width: 210px;
+			height: 260px;
+			background-image: url(../../../assets/images/kitchen.png);
+		}
 	}
 
-	.work__image__grid-column1 {
-		display: flex;
-		width: 173px;
-		gap: 15px;
-		flex-direction: column;
-	}
-	.work__image__grid-column1-bg {
-		width: 173px;
-		height: 125px;
-		background-color: $light-green;
-		border-radius: 5px;
-	}
-	.work__image__grid-column1-img {
-		width: 173px;
-		height: 210px;
-		background-image: url(../../../assets/images/kitchen-with-girl.png);
-	}
-	.work__image__grid-column2 {
-		display: flex;
-		width: 173px;
-		gap: 15px;
-		flex-direction: column;
-	}
-	.work__image__grid-column2-bg {
-		width: 210px;
-		height: 75px;
-		background-color: $light-green;
-		border-radius: 5px;
-	}
-	.work__image__grid-column2-img {
-		width: 210px;
-		height: 260px;
-		background-image: url(../../../assets/images/kitchen.png);
-	}
 	.work__option {
 		display: flex;
 		flex-direction: column;
@@ -199,17 +199,17 @@
 				font-size: 20px;
 			}
 		}
-	}
-
-	.work__option__form {
-		p {
-			font-size: 15px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 12px;
+		&__form {
+			p {
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 12px;
+			}
 		}
 	}
-	.work__button__container {
+
+	&__button__container {
 		display: flex;
 		gap: 10px;
 		align-items: flex-end;
@@ -221,7 +221,7 @@
 		}
 	}
 
-	.work__input {
+	&__input {
 		float: left;
 		position: relative;
 		width: 210px;
@@ -229,11 +229,11 @@
 			width: 100%;
 		}
 	}
-	.work__preview__input__effect:focus {
+	&_preview__input-effect:focus {
 		outline: none;
 		height: 50px;
 	}
-	.work__preview__input__effect {
+	&__preview__input-effect {
 		border: 0;
 		border-bottom: 1px solid #ccc;
 		border-radius: 5px 5px 0px 0px;
@@ -250,7 +250,7 @@
 		letter-spacing: 1px;
 		border: none;
 	}
-	.work__preview__input__effect ~ .work__preview__focus-border {
+	&__preview__input-effect ~ &__preview__focus-border {
 		position: absolute;
 		bottom: 0;
 		left: 0;
@@ -260,12 +260,12 @@
 		background-color: $light-green;
 		transition: 0.4s;
 	}
-	.work__preview__input__effect:focus ~ .work__preview__focus-border,
-	.has-content.effect-16 ~ .work__preview__focus-border {
+	&__preview__input-effect:focus ~ &__preview__focus-border,
+	.has-content.effect-16 ~ &_preview__focus-border {
 		width: 100%;
 		transition: 0.4s;
 	}
-	.work__preview__input__effect ~ label {
+	&__preview__input-effect ~ label {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -275,8 +275,8 @@
 		z-index: -1;
 		letter-spacing: 0.5px;
 	}
-	.work__preview__input__effect:focus ~ label,
-	.has-content.work__preview__input__effect ~ label {
+	&__preview__input-effect:focus ~ label,
+	.has-content &__preview__input-effect ~ label {
 		top: 4px;
 		font-size: 12px;
 		color: #85a5a9;
@@ -284,11 +284,11 @@
 		z-index: 1;
 		left: 4px;
 	}
-	.input-effect .work__preview__input__effect:focus {
+	.input-effect &__preview__input-effect:focus {
 		border-radius: 5px 5px 0px 0px;
 		background: #d9d9d9;
 	}
-	.work__preview__button {
+	&__preview__button {
 		width: 250px;
 		height: 50px;
 		gap: 10px;
