@@ -27,6 +27,7 @@ import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
+import { PageErrorComponent } from './components/page-error/page-error.component';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -40,6 +41,7 @@ import { HowWeWorkComponent } from './components/how-we-work/how-we-work.compone
 		RootComponent,
 		NotExistComponent,
     HowWeWorkComponent,
+    PageErrorComponent,
 	],
 	imports: [
 		BrowserModule,
