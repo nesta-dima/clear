@@ -1,21 +1,19 @@
 @import '../../../styles/variables.scss';
 .clean-info {
 	max-width: $desktop;
-	margin: auto;
-	display: flex;
+  display: flex;
 	gap: 115px;
-	margin-bottom: 110px;
-	@media (max-width: $desktop) {
+  margin: auto auto 110px;
+  @media (max-width: $desktop) {
 		padding: 15px;
-		gap: 0px;
-		margin-bottom: 0px;
+		gap: 0;
+		margin-bottom: 0;
 		flex-direction: column;
 	}
 	&__options__button {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 55px;
-		flex-wrap: wrap;
+    flex-wrap: wrap;
 		margin: auto;
 
 		@media (max-width: $desktop) {
@@ -49,7 +47,6 @@
 				width: 157px;
 				height: 100px;
 				border-radius: 5px;
-				font-family: Greycliff CF;
 				font-size: 16px;
 				font-style: normal;
 				font-weight: 400;
@@ -64,7 +61,7 @@
 					width: 35px;
 					height: 15px;
 					margin: auto;
-					content: url(../../../assets/svg/SmileIcon.svg);
+					content: url('/assets/svg/SmileIcon.svg');
 				}
 			}
 		}
@@ -91,6 +88,15 @@
 	}
 
 	&__options__button__container {
+    cursor: pointer;
+    &:hover{
+      & button {
+        transition: all .3s;
+        background: $yellow;
+        cursor: pointer;
+      }
+    }
+
 		@media (max-width: $desktop) {
 			display: flex;
 			width: 157px;
@@ -117,7 +123,6 @@
 				border-radius: 5px;
 				border: 1px solid rgba(79, 77, 74, 0.5);
 				background: var(--unnamed, #fff);
-				font-family: Greycliff CF;
 				font-size: 26px;
 				font-style: normal;
 				font-weight: 400;
@@ -128,6 +133,11 @@
 			}
 		}
 	}
+  &__options__button__container.active{
+    & button {
+      background: $yellow;
+    }
+  }
 	&__options__features {
 		@media (max-width: $desktop) {
 			display: none;
@@ -139,25 +149,26 @@
 			div:nth-child(1) {
 				height: 130px;
 				width: 175px;
-				background-image: url(./../../../assets/images/baby.png);
+				background-image: url('/assets/images/baby.png');
 			}
 			div:nth-child(2) {
 				height: 130px;
 				width: 230px;
-				background-image: url(./../../../assets/images/medicine.png);
+				background-image: url('/assets/images/medicine.png');
 			}
 			div:nth-child(3) {
 				height: 130px;
 				width: 175px;
-				background-image: url(./../../../assets/images/pet.png);
+				background-image: url('/assets/images/pet.png');
 			}
 			& + p {
 				margin-top: 21px;
 				margin-bottom: 60px;
 				color: $black;
-				font-family: Lato;
 				font-size: 16px;
-				line-height: normal;
+				line-height: 20px;
+        text-transform: initial;
+        font-weight: 400;
 			}
 		}
 	}
@@ -192,8 +203,7 @@
 	}
 	&__preview__input__effect {
 		border: 0;
-		border-bottom: 1px solid #ccc;
-		border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
 		height: 50px;
 		padding: 15px;
 		background-color: $white;
@@ -212,7 +222,7 @@
 			box-sizing: border-box;
 			width: 100%;
 			height: 230px;
-			padding: 22px 0px 0px 15px;
+			padding: 22px 0 0 15px;
 			border-radius: 5px;
 			border: 1px solid rgba(185, 185, 185, 0.7);
 			background: #fff;
@@ -232,19 +242,22 @@
 			font-size: 15px;
 			font-style: normal;
 			font-weight: 700;
-			line-height: 20px; /* 133.333% */
+			line-height: 20px;
 			text-decoration-line: underline;
+      text-transform: initial;
 			@media (max-width: $desktop) {
 				margin: 0;
 			}
 		}
-		& a p {
+		& a {
 			margin-top: 21px;
 			font-size: 16px;
 			font-style: normal;
 			font-weight: 800;
-			line-height: 20px; /* 125% */
+			line-height: 20px;
 			text-decoration-line: underline;
+      text-transform: initial;
+      color: $black;
 		}
 	}
 	&__form__input-container {
@@ -263,10 +276,10 @@
 		margin-top: 86px;
 		margin-bottom: 120px;
 		@media (max-width: $desktop) {
+      display: none;
 			width: 100%;
-			margin: 0;
-			margin-bottom: 165px;
-			bottom: 100px;
+      margin: 0 0 165px;
+      bottom: 100px;
 		}
 		button {
 			border: none;
@@ -276,14 +289,13 @@
 			background: $red;
 			color: $white;
 			text-align: center;
-			font-family: Lato;
 			font-size: 18px;
 			font-style: normal;
 			font-weight: 500;
 			line-height: 20px;
+      cursor: pointer;
 		}
 		p {
-			font-family: Inter;
 			font-size: 12px;
 			font-style: normal;
 			font-weight: 400;
@@ -301,10 +313,10 @@
 		box-sizing: border-box;
 		@media (max-width: $desktop) {
 			background: rgba(133, 165, 169);
+      display: none;
 		}
 		h4 {
-			margin: 0px;
-			font-family: Lato;
+			margin: 0;
 			font-size: 14px;
 			font-style: normal;
 			font-weight: bolder;
@@ -312,14 +324,12 @@
 		}
 		p {
 			margin-bottom: 10px;
-			font-family: Lato;
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 700;
 			line-height: normal;
 		}
 		span {
-			font-family: Lato;
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 400;
