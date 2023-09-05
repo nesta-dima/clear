@@ -27,6 +27,15 @@ import { InfoclearComponent } from './components/infoclear/infoclear.component';
 import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
+import { ResultSliderComponent } from './components/result-slider/result-slider.component';
+import { GeneralCleanComponent } from './components/calculate-price/typesClean/general-clean/general-clean.component';
+import { MaintenanceCleanComponent } from './components/calculate-price/typesClean/maintenance-clean/maintenance-clean.component';
+import { DryCleanComponent } from './components/calculate-price/typesClean/dry-clean/dry-clean.component';
+import { WindowCleanComponent } from './components/calculate-price/typesClean/window-clean/window-clean.component';
+import { DifferentCleanComponent } from './components/calculate-price/typesClean/different-clean/different-clean.component';
+
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -40,7 +49,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 		InfoclearComponent,
 		RootComponent,
 		NotExistComponent,
-		// RequestCallComponent,
+		ClearSliderComponent,
+		ResultSliderComponent,
+		GeneralCleanComponent,
+		MaintenanceCleanComponent,
+		DryCleanComponent,
+		WindowCleanComponent,
+		DifferentCleanComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -58,6 +73,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 		MatFormFieldModule,
 		MatSelectModule,
 		ReactiveFormsModule,
+		MatDialogModule,
+		NgImageSliderModule,
 		MatDialogModule,
 	],
 	providers: [AboutCompanyService],

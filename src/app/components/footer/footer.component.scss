@@ -53,11 +53,14 @@
     position: absolute;
     width: 315px;
     height: 348px;
-    background-image: url("../../../assets/svg/bubble.svg");
+    background-image: url("/assets/svg/bubble.svg");
     background-repeat: no-repeat;
     background-size: contain;
     right: -213px;
     bottom: -242px;
+    animation-name: bubble-footer;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     @media (max-width: $desktop) {
       right: -120px;
       bottom: -80px;
@@ -157,3 +160,14 @@
   }
 }
 
+
+@keyframes bubble-footer {
+  0% {
+    right: -213px;
+    bottom: -242px;
+  }
+  50% {
+    right: -213px;
+    bottom: -202px;
+  }
+}
