@@ -1,0 +1,17 @@
+
+<div class="result" id="result">
+  <div class="wrapper">
+    <div class="result__title">фото <span>до и после уборки</span></div>
+    <ng-image-slider
+      [images]="imageObject" #nav
+      [infinite]="true"
+      [autoSlide]="3"
+      [imageSize]="{width: '20%', height: 200, space: 8}"
+      [lazyLoading]="true"
+      [animationSpeed]="3"
+      [manageImageRatio]="true"
+    >
+    </ng-image-slider>
+  </div>
+</div>
+
