@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+
+.result {
+  margin-bottom: 120px;
+
+  @media (max-width: $desktop) {
+    display: none;
+  }
+  .wrapper{
+    width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__title{
+    color: $black;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 44px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @media (max-width: $desktop) {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 26px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    span{
+      color: $light-green;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 44px;
+      text-transform: uppercase;
+      @media (max-width: $desktop) {
+        color: $light-green;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 44px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+}
