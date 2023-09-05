@@ -1,7 +1,6 @@
 @import '../../../styles/variables.scss';
 
 .work {
-	margin-bottom: 134px;
 	margin: 0 auto;
 	max-width: $desktop;
 	@media (max-width: $desktop) {
@@ -12,7 +11,7 @@
 		position: absolute;
 		width: 315px;
 		height: 348px;
-		background-image: url('../../../assets/svg/bubble.svg');
+		background-image: url('/assets/svg/bubble.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		right: 36%;
@@ -69,7 +68,7 @@
 		&__grid-column1-img {
 			width: 173px;
 			height: 210px;
-			background-image: url(../../../assets/images/kitchen-with-girl.png);
+			background-image: url('/assets/images/kitchen-with-girl.png');
 		}
 		&__grid-column2 {
 			display: flex;
@@ -86,7 +85,7 @@
 		&__grid-column2-img {
 			width: 210px;
 			height: 260px;
-			background-image: url(../../../assets/images/kitchen.png);
+			background-image: url('/assets/images/kitchen.png');
 		}
 	}
 
@@ -153,15 +152,10 @@
 	}
 	&__preview__input-effect {
 		border: 0;
-		border-bottom: 1px solid #ccc;
-		border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0 0;
 		height: 50px;
 		padding: 15px;
 		background-color: $white;
-		font:
-			15px/24px 'Lato',
-			Arial,
-			sans-serif;
 		color: #333;
 		width: 100%;
 		box-sizing: border-box;
@@ -203,7 +197,7 @@
 		left: 4px;
 	}
 	.input-effect &__preview__input-effect:focus {
-		border-radius: 5px 5px 0px 0px;
+		border-radius: 5px 5px 0 0;
 		background: #d9d9d9;
 	}
 	&__preview__button {
@@ -218,6 +212,7 @@
 		font-weight: 500;
 		line-height: 20px;
 		border: none;
+    cursor: pointer;
 		@media (max-width: $desktop) {
 			width: 100%;
 		}
