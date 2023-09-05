@@ -27,6 +27,7 @@ import { InfoClearComponent } from './components/info-clear/info-clear.component
 import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
 import { ResultSliderComponent } from './components/result-slider/result-slider.component';
@@ -49,6 +50,7 @@ import { DifferentCleanComponent } from './components/calculate-price/typesClean
 		InfoClearComponent,
 		RootComponent,
 		NotExistComponent,
+		HowWeWorkComponent,
 		ClearSliderComponent,
 		ResultSliderComponent,
 		GeneralCleanComponent,
