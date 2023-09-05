@@ -23,7 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { InfoclearComponent } from './components/infoclear/infoclear.component';
+import { InfoClearComponent } from './components/info-clear/info-clear.component';
 import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -46,7 +46,7 @@ import { DifferentCleanComponent } from './components/calculate-price/typesClean
 		QuestionsComponent,
 		SocialMediaComponent,
 		FooterComponent,
-		InfoclearComponent,
+		InfoClearComponent,
 		RootComponent,
 		NotExistComponent,
 		ClearSliderComponent,
