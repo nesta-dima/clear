@@ -105,8 +105,7 @@
 			cursor: pointer;
 
 			&::after {
-				content: url(../../../assets/svg/arrowUp.svg);
-				margin: 10px;
+				content: url('/assets/svg/arrowUp.svg');
 			}
 		}
 
@@ -117,8 +116,7 @@
 		}
 		details[open] summary:after {
 			rotate: 180deg;
-			margin: 10px;
-			content: url(../../../assets/svg/arrowUp.svg);
+			content: url('/assets/svg/arrowUp.svg');
 		}
 	}
 	&__cell {
