@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { GeneralCleanComponent } from './typesClean/general-clean/general-clean.component';
@@ -6,13 +6,14 @@ import { MaintenanceCleanComponent } from './typesClean/maintenance-clean/mainte
 import { DryCleanComponent } from './typesClean/dry-clean/dry-clean.component';
 import { WindowCleanComponent } from './typesClean/window-clean/window-clean.component';
 import { DifferentCleanComponent } from './typesClean/different-clean/different-clean.component';
+import { FormService } from '../../services/form.service';
 
 @Component({
 	selector: 'app-calculate-price',
 	templateUrl: './calculate-price.component.html',
 	styleUrls: ['./calculate-price.component.scss'],
 })
-export class CalculatePriceComponent {
+export class CalculatePriceComponent implements OnInit {
 	typesClean = [
 		{
 			title: 'Поддерживающая уборка',
@@ -35,10 +36,8 @@ export class CalculatePriceComponent {
 			component: DifferentCleanComponent,
 		},
 	];
-	flat: any;
-	house: any;
 
-	toppings = new FormControl('');
+	generalOptions = new FormControl('');
 	toppings2 = new FormControl('');
 
 	toppingList: string[] = [
@@ -65,10 +64,37 @@ export class CalculatePriceComponent {
 	key2: any;
 	key3: any;
 
-	constructor(public dialog: MatDialog) {}
+	constructor(
+		public dialog: MatDialog,
+		public formService: FormService,
+	) {}
+
+	ngOnInit() {
+		this.formService.square$.subscribe((square) => {
+			this.selectedSquare = square;
+		});
+		this.formService.place$.subscribe((place) => {
+			this.selectedPlace = place;
+		});
+	}
+
 	openDialog(item: any): void {
 		this.dialog.open(item.component, {
 			width: '90%',
 		});
+	}
+
+	selectedSquare = '';
+	public onSquareChange(square: string) {
+		this.formService.square$.next(square);
+	}
+
+	selectedPlace = '';
+	public onPlaceChange(place: string) {
+		this.formService.place$.next(place);
+	}
+
+	generalChange() {
+		this.formService.generalOptions$.next(this.generalOptions.value);
 	}
 }

@@ -15,7 +15,7 @@ export class RequestCallComponent {
 
 	public sendEmail(e: Event) {
 		e.preventDefault();
-		console.log(' e.target', e.target);
+		// console.log(' e.target', e.target);
 		// TODO: send values to the backend
 		emailjs.sendForm('service_s77665b', 'template_2ivum47', '', 'tKf2zw7HDXxukyEN2').then(
 			(result: EmailJSResponseStatus) => {
