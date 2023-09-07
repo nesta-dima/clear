@@ -11,8 +11,7 @@ export class AboutCompanyComponent implements OnInit {
 
 	ngOnInit() {
 		const items = this.service.getItems().subscribe((result) => {
-			console.log(result);
+			console.log();
 		});
-		console.log('items', items);
 	}
 }
