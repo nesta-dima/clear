@@ -37,29 +37,62 @@ export class CalculatePriceComponent implements OnInit {
 		},
 	];
 
-	generalOptions = new FormControl('');
-	toppings2 = new FormControl('');
+	generalValues = new FormControl('');
+	maintenanceValues = new FormControl('');
+	windowValues = new FormControl('');
+	dryValues = new FormControl('');
+	generalOptions: string[] = [
+		'Погладить белье',
+		'Дополнительные часы',
+		'Дополнительный сан. узел',
+		'Уборка гардероба',
+		'Уборка в шкафу',
+		'Чистка детской коляски',
+		'Убрать лоток для животных',
+		'помыть стены',
+	];
+	maintenanceOptions: string[] = [
+		'Погладить белье',
+		'Помыть холодильник',
+		'Помыть духовку',
+		'Помыть вытяжку',
+		'Убрать в кухонных шкафчиках',
+		'Дополнительные часы',
+		'Помыть посуду',
+		'Дополнительный сан. узел',
+		'Уборка гардероба',
+		'Уборка в шкафу',
+		'Убрать на балконе',
+		'Помыть шкафы на кухне',
+		'Чистка детской коляски',
+		'Убрать лоток для животных',
+		'Помыть микроволновку',
+		'помыть стены',
+	];
+	windowOptions: string[] = [
+		'Помыть 1 окно (2 створки)',
+		'Помыть 1 окно (3 створки)',
+		'Балконная дверь и 1 окно (3 створки) ',
+		'2 окна (4 створки)',
+		'другое количество',
+	];
+	dryOptions: string[] = [
+		'Двухместный диван',
+		'Трехместный диван',
+		'Угловой (4 места)',
+		'Угловой (5-6 мест) ',
+		'Угловой (7 мест)',
+		'Односпальный матрас ',
+		'Односпальный матрас (2 стороны)',
+		'Двойной матрас',
+		'Двуспальный матрас (2 стороны)',
+		'Изголовье кровати',
+		'Мягкое кресло',
+		'Обычный стул',
+		'Ковер, м.кв.',
+		'Офисный стулx',
+	];
 
-	toppingList: string[] = [
-		'Погладить белье',
-		'Дополнительные часы',
-		'Дополнительный сан. узел',
-		'Уборка гардероба',
-		'Уборка в шкафу',
-		'Чистка детской коляски',
-		'Убрать лоток для животных',
-		'помыть стены',
-	];
-	toppingList2: string[] = [
-		'Погладить белье',
-		'Дополнительные часы',
-		'Дополнительный сан. узел',
-		'Уборка гардероба',
-		'Уборка в шкафу',
-		'Чистка детской коляски',
-		'Убрать лоток для животных',
-		'помыть стены',
-	];
 	key1: any;
 	key2: any;
 	key3: any;
@@ -95,6 +128,15 @@ export class CalculatePriceComponent implements OnInit {
 	}
 
 	generalChange() {
-		this.formService.generalOptions$.next(this.generalOptions.value);
+		this.formService.generalValues$.next(this.generalValues.value);
+	}
+	maintenanceChange() {
+		this.formService.maintenanceValues$.next(this.maintenanceValues.value);
+	}
+	windowChange() {
+		this.formService.windowValues$.next(this.windowValues.value);
+	}
+	dryChange() {
+		this.formService.dryValues$.next(this.dryValues.value);
 	}
 }

@@ -9,7 +9,10 @@ import { FormService } from '../../services/form.service';
 export class InfoClearComponent implements OnInit {
 	square = '';
 	place = '';
-	generalOptions = '';
+	generalOptions = [];
+	maintenanceOptions = [];
+	windowOptions = [];
+	dryOptions = [];
 	constructor(private formService: FormService) {}
 
 	ngOnInit() {
@@ -19,8 +22,21 @@ export class InfoClearComponent implements OnInit {
 		this.formService.place$.subscribe((place) => {
 			this.place = place;
 		});
-		this.formService.generalOptions$.subscribe((options) => {
-			this.generalOptions = options.join(', ');
+		this.formService.generalValues$.subscribe((general) => {
+			this.generalOptions = general;
 		});
+		this.formService.maintenanceValues$.subscribe((maintenance) => {
+			this.maintenanceOptions = maintenance;
+		});
+		this.formService.windowValues$.subscribe((window) => {
+			this.windowOptions = window;
+		});
+		this.formService.dryValues$.subscribe((dry) => {
+			this.dryOptions = dry;
+		});
+	}
+
+	get getOptions() {
+		return [...this.generalOptions, ...this.maintenanceOptions, ...this.windowOptions, ...this.dryOptions].join(', ');
 	}
 }

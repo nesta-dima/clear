@@ -311,6 +311,7 @@
 		margin-bottom: 10px;
 		padding: 27px 52px 26px 32px;
 		box-sizing: border-box;
+		overflow-x: hidden;
 		@media (max-width: $desktop) {
 			background: rgba(133, 165, 169);
       display: none;
