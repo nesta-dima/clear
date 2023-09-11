@@ -27,7 +27,7 @@ export class HeaderComponent {
 
 	openModal() {
 		this.dialog.open(RequestCallComponent, {
-			width: '250px',
+			width: '350px',
 		});
 	}
 

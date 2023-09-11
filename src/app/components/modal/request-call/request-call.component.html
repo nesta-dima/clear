@@ -1,13 +1,32 @@
-<h2 mat-dialog-title>оставьте ваши контакты</h2>
-<div mat-dialog-content>
-  <p>и мы свяжемся с вами в ближайшее время </p>
-  <form class="contact-form" (submit)="sendEmail($event)">
-    <label>Name</label>
-    <input type="text" name="user_name">
-    <label>Email</label>
-    <input type="email" name="user_email">
-    <label>Message</label>
-    <textarea name="message"></textarea>
-    <input type="submit" value="Send">
+<div class="request-call" *ngIf="!isSendRequest; else doneRequest">
+  <div class="request-call__title">оставьте ваши контакты</div>
+  <p class="request-call__sub-title">и мы свяжемся с вами в ближайшее время </p>
+  <form class="request-call__form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="request-call__loader" *ngIf="isLoading"><mat-spinner></mat-spinner></div>
+    <mat-form-field appearance="outline">
+      <mat-label>Имя</mat-label>
+      <input matInput formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Телефон</mat-label>
+      <input matInput formControlName="phone">
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" [disabled]="isLoading">{{isLoading ? 'Отправляю...' : 'Заказать звонок' }}</button>
   </form>
 </div>
+<ng-template #doneRequest>
+  <div class="request-call">
+    <img src="/assets/images/request-done.png" alt="Response done" />
+    <div class="request-call__title">Спасибо!</div>
+    <div class="request-call__title-description">ваш заказ принят</div>
+    <p class="request-call__sub-title">В ближайшее время с вами всяжется наш менеджер</p>
+    <button mat-raised-button mat-dialog-close>Вернуться на главную страницу</button>
+  </div>
+</ng-template>
