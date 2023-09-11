@@ -63,6 +63,9 @@
     right: 190px;
     bottom: 100px;
     z-index: -1;
+    animation-name: bubble-question;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     @media (max-width: $desktop) {
       display: none;
     }
@@ -102,7 +105,7 @@
       cursor: pointer;
 
       &::after {
-        content: url(../../../assets/svg/arrowUp.svg);
+        content: url('/assets/svg/arrowUp.svg');
         margin: 10px;
       }
     }
@@ -115,7 +118,7 @@
     details[open] summary:after {
       rotate: 180deg;
       margin: 10px;
-      content: url(../../../assets/svg/arrowUp.svg);
+      content: url('/assets/svg/arrowUp.svg');
     }
 
   }
@@ -148,6 +151,13 @@
 
 }
 
-
+@keyframes bubble-question {
+  0% {
+    right: 190px;
+  }
+  50% {
+    right: 210px;
+  }
+}
 
 

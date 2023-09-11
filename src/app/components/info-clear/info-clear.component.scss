@@ -1,0 +1,379 @@
+@import '../../../styles/variables.scss';
+.clean-info {
+	max-width: $desktop;
+  display: flex;
+	gap: 115px;
+  margin: auto auto 110px;
+  @media (max-width: $desktop) {
+		padding: 15px;
+		gap: 0;
+		margin-bottom: 0;
+		flex-direction: column;
+	}
+	&__options__button {
+		display: flex;
+		justify-content: space-between;
+    flex-wrap: wrap;
+		margin: auto;
+
+		@media (max-width: $desktop) {
+			width: 100%;
+			justify-content: center;
+			gap: 15px;
+			&__container {
+				width: 157px;
+				height: 100px;
+				background-color: $white;
+				border-radius: 5px;
+			}
+		}
+
+		& > button {
+			display: flex;
+			height: 50px;
+			padding: 25px;
+			justify-content: space-between;
+			align-items: center;
+			gap: 10px;
+			border-radius: 5px;
+			background: $yellow;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 44px;
+			border: none;
+			margin-bottom: 55px;
+			@media (max-width: $desktop) {
+				width: 157px;
+				height: 100px;
+				border-radius: 5px;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 44px;
+				margin-bottom: 0;
+				flex-direction: column;
+				&::before {
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 44px;
+					width: 35px;
+					height: 15px;
+					margin: auto;
+					content: url('/assets/svg/SmileIcon.svg');
+				}
+			}
+		}
+	}
+	&__options {
+		width: 59%;
+		@media (max-width: $desktop) {
+			width: 100%;
+		}
+		p {
+			color: $black;
+			font-size: 24px;
+			font-weight: 800;
+			line-height: 44px;
+			text-transform: uppercase;
+			span {
+				color: $light-green;
+				font-size: 24px;
+				font-weight: 800;
+				line-height: 44px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__options__button__container {
+    cursor: pointer;
+    &:hover{
+      & button {
+        transition: all .3s;
+        background: $yellow;
+        cursor: pointer;
+      }
+    }
+
+		@media (max-width: $desktop) {
+			display: flex;
+			width: 157px;
+			height: 100px;
+			background-color: white;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		button {
+			height: 50px;
+			padding: 25px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+			border: 1px solid $black;
+			color: $black;
+			font-size: 26px;
+			font-weight: 400;
+			line-height: 44px;
+			margin-bottom: 10px;
+			@media (max-width: $desktop) {
+				border-radius: 5px;
+				border: 1px solid rgba(79, 77, 74, 0.5);
+				background: var(--unnamed, #fff);
+				font-size: 26px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 44px;
+				width: 88.766px;
+				height: 35px;
+				padding: 25px;
+			}
+		}
+	}
+  &__options__button__container.active{
+    & button {
+      background: $yellow;
+    }
+  }
+	&__options__features {
+		@media (max-width: $desktop) {
+			display: none;
+		}
+		&-img__container {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 21px;
+			div:nth-child(1) {
+				height: 130px;
+				width: 175px;
+				background-image: url('/assets/images/baby.png');
+			}
+			div:nth-child(2) {
+				height: 130px;
+				width: 230px;
+				background-image: url('/assets/images/medicine.png');
+			}
+			div:nth-child(3) {
+				height: 130px;
+				width: 175px;
+				background-image: url('/assets/images/pet.png');
+			}
+			& + p {
+				margin-top: 21px;
+				margin-bottom: 60px;
+				color: $black;
+				font-size: 16px;
+				line-height: 20px;
+        text-transform: initial;
+        font-weight: 400;
+			}
+		}
+	}
+	&__input {
+		float: left;
+		position: relative;
+		width: 210px;
+		@media (max-width: $desktop) {
+			width: 100%;
+		}
+	}
+	&__preview__input__effect:focus {
+		outline: none;
+		height: 50px;
+	}
+	&__preview__input__effect {
+		border: 0;
+		border-bottom: 1px solid #ccc;
+		border-radius: 5px 5px 0px 0px;
+		height: 50px;
+		padding: 15px;
+		background-color: $white;
+		font:
+			15px/24px 'Lato',
+			Arial,
+			sans-serif;
+		color: #333;
+		width: 100%;
+		box-sizing: border-box;
+		letter-spacing: 1px;
+		border: none;
+	}
+	&__preview__input__effect {
+		border: 0;
+    border-radius: 5px 5px 0px 0px;
+		height: 50px;
+		padding: 15px;
+		background-color: $white;
+		font:
+			15px/24px 'Lato',
+			Arial,
+			sans-serif;
+		color: #333;
+		width: 100%;
+		box-sizing: border-box;
+		letter-spacing: 1px;
+		border: none;
+	}
+	&__form {
+		& textarea {
+			box-sizing: border-box;
+			width: 100%;
+			height: 230px;
+			padding: 22px 0 0 15px;
+			border-radius: 5px;
+			border: 1px solid rgba(185, 185, 185, 0.7);
+			background: #fff;
+			color: #d9d9d9;
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: lowercase;
+			margin-bottom: 44px;
+			margin-top: 20px;
+			@media (max-width: $desktop) {
+				margin-top: 25px;
+			}
+		}
+		& > p {
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 20px;
+			text-decoration-line: underline;
+      text-transform: initial;
+			@media (max-width: $desktop) {
+				margin: 0;
+			}
+		}
+		& a {
+			margin-top: 21px;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 800;
+			line-height: 20px;
+			text-decoration-line: underline;
+      text-transform: initial;
+      color: $black;
+		}
+	}
+	&__form__input-container {
+		display: flex;
+		gap: 35px;
+		@media (max-width: $desktop) {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+	&__order {
+		position: sticky;
+		top: 20px;
+		height: 245px;
+		bottom: -38px;
+		margin-top: 86px;
+		margin-bottom: 120px;
+		@media (max-width: $desktop) {
+      display: none;
+			width: 100%;
+      margin: 0 0 165px;
+      bottom: 100px;
+		}
+		button {
+			border: none;
+			padding: 20px 56px 20px 65px;
+			width: 100%;
+			border-radius: 5px;
+			background: $red;
+			color: $white;
+			text-align: center;
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 20px;
+      cursor: pointer;
+		}
+		p {
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			color: $black;
+		}
+	}
+	&__order__check {
+		width: 100%;
+		height: 265px;
+		border-radius: 5px;
+		background: rgba(133, 165, 169, 0.2);
+		margin-bottom: 10px;
+		padding: 27px 52px 26px 32px;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		@media (max-width: $desktop) {
+			background: rgba(133, 165, 169);
+      display: none;
+		}
+		h4 {
+			margin: 0;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: bolder;
+			line-height: normal;
+		}
+		p {
+			margin-bottom: 10px;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+		span {
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+	}
+}
+
+.clean-info__preview__input__effect ~ .clean-info__preview__focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+
+	background-color: $light-green;
+	transition: 0.4s;
+}
+.clean-info__preview__input__effect:focus ~ .clean-info__preview__focus-border,
+.has-content.effect-16 ~ .clean-info__preview__focus-border {
+	width: 100%;
+	transition: 0.4s;
+}
+.clean-info__preview__input__effect ~ label {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 9px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.clean-info__preview__input__effect:focus ~ label,
+.has-content.clean-info__preview__input__effect ~ label {
+	top: 4px;
+	font-size: 12px;
+	color: #85a5a9;
+	transition: 0.3s;
+	z-index: 1;
+	left: 4px;
+}
+.input-effect .clean-info__preview__input__effect:focus {
+	border-radius: 5px 5px 0px 0px;
+	background: #d9d9d9;
+}

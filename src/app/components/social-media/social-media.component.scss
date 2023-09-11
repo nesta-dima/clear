@@ -12,12 +12,15 @@
     position: absolute;
     width: 315px;
     height: 348px;
-    background-image: url("../../../assets/svg/bubble.svg");
+    background-image: url("/assets/svg/bubble.svg");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
     bottom: 0;
     left: 15px;
+    animation-name: bubble-social;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     @media (max-width: $desktop) {
       display: none;
     }
@@ -149,10 +152,18 @@
   &__grid-column4 {
     border-radius: 5px;
     width: 380px;
-    background-image: url(../../../assets/images/social-blok4.png);
+    background-image: url('/assets/images/social-blok4.png');
   }
 }
 
+@keyframes bubble-social {
+  0% {
+    left: 15px;
+  }
+  50% {
+    left: 55px;
+  }
+}
 
 
 

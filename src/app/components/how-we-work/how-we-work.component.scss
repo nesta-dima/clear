@@ -1,282 +1,304 @@
 @import '../../../styles/variables.scss';
 
-.howWork-container {
-	margin-bottom: 134px;
+.work {
 	margin: 0 auto;
 	max-width: $desktop;
 	@media (max-width: $desktop) {
 		padding: 0 15px;
 	}
-}
-.howWork__bubble {
-	z-index: -1;
-	position: absolute;
-	width: 315px;
-	height: 348px;
-	background-image: url('../../../assets/svg/bubble.svg');
-	background-repeat: no-repeat;
-	background-size: contain;
-	right: 36%;
+	&__bubble {
+		z-index: -1;
+		position: absolute;
+		width: 315px;
+		height: 348px;
+		background-image: url('/assets/svg/bubble.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		right: 36%;
+		@media (max-width: $desktop) {
+			display: none;
+		}
+	}
 
-	@media (max-width: $desktop) {
+	&__title {
+		font-size: 36px;
+		font-weight: bold;
+		line-height: 44px;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 35px;
+		color: $black;
+		@media (max-width: $desktop) {
+			font-size: 24px;
+			font-style: normal;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+		span {
+			color: $light-green;
+		}
+	}
+
+	&__preview {
+		display: flex;
+		gap: 70px;
+		margin-bottom: 133px;
+		@media (max-width: $desktop) {
+			margin-bottom: 55px;
+		}
+	}
+	&__image {
+		display: flex;
+		gap: 35px;
+		@media (max-width: $desktop) {
+			display: none;
+		}
+		&__grid-column1 {
+			display: flex;
+			width: 173px;
+			gap: 15px;
+			flex-direction: column;
+		}
+		&__grid-column1-bg {
+			width: 173px;
+			height: 125px;
+			background-color: $light-green;
+			border-radius: 5px;
+		}
+		&__grid-column1-img {
+			width: 173px;
+			height: 210px;
+			background-image: url('/assets/images/kitchen-with-girl.png');
+		}
+		&__grid-column2 {
+			display: flex;
+			width: 173px;
+			gap: 15px;
+			flex-direction: column;
+		}
+		&__grid-column2-bg {
+			width: 210px;
+			height: 75px;
+			background-color: $light-green;
+			border-radius: 5px;
+		}
+		&__grid-column2-img {
+			width: 210px;
+			height: 260px;
+			background-image: url('/assets/images/kitchen.png');
+		}
+	}
+
+	.work__option {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		p {
+			color: $black;
+			font-size: 36px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+			@media (max-width: $desktop) {
+				font-size: 18px;
+				margin-top: 0;
+			}
+		}
+		span {
+			color: $light-green;
+			font-size: 36px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-transform: uppercase;
+			@media (max-width: $desktop) {
+				font-size: 20px;
+			}
+		}
+		&__form {
+			p {
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 12px;
+			}
+		}
+	}
+
+	&__button__container {
+		display: flex;
+		gap: 10px;
+		align-items: flex-end;
+		width: 100%;
+
+		@media (max-width: $desktop) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__input {
+		float: left;
+		position: relative;
+		width: 210px;
+		@media (max-width: $desktop) {
+			width: 100%;
+		}
+	}
+	&_preview__input-effect:focus {
+		outline: none;
+		height: 50px;
+	}
+	&__preview__input-effect {
+		border: 0;
+    border-radius: 5px 5px 0 0;
+		height: 50px;
+		padding: 15px;
+		background-color: $white;
+		color: #333;
+		width: 100%;
+		box-sizing: border-box;
+		letter-spacing: 1px;
+		border: none;
+	}
+	&__preview__input-effect ~ &__preview__focus-border {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+
+		background-color: $light-green;
+		transition: 0.4s;
+	}
+	&__preview__input-effect:focus ~ &__preview__focus-border,
+	.has-content.effect-16 ~ &_preview__focus-border {
+		width: 100%;
+		transition: 0.4s;
+	}
+	&__preview__input-effect ~ label {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 9px;
+		color: #aaa;
+		transition: 0.3s;
+		z-index: -1;
+		letter-spacing: 0.5px;
+	}
+	&__preview__input-effect:focus ~ label,
+	.has-content &__preview__input-effect ~ label {
+		top: 4px;
+		font-size: 12px;
+		color: #85a5a9;
+		transition: 0.3s;
+		z-index: 1;
+		left: 4px;
+	}
+	.input-effect &__preview__input-effect:focus {
+		border-radius: 5px 5px 0 0;
+		background: #d9d9d9;
+	}
+	&__preview__button {
+		width: 250px;
+		height: 50px;
+		gap: 10px;
+		border-radius: 5px;
+		background: #c45645;
+		color: #f5f5f5;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 20px;
+		border: none;
+    cursor: pointer;
+		@media (max-width: $desktop) {
+			width: 100%;
+		}
+	}
+	input:not(:invalid) label {
 		display: none;
 	}
 }
-.howWork-container-label_dark {
-	color: $black;
-}
-.howWork-container-label_light {
-	color: $light-green;
-}
-.howWork-container-label {
-	font-size: 36px;
-	font-weight: bold;
-	line-height: 44px;
-	text-transform: uppercase;
-	margin-top: 0px;
-	margin-bottom: 35px;
-	@media (max-width: $desktop) {
-		font-size: 24px;
-		font-style: normal;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-}
-.howWork-road {
+.road {
 	display: flex;
 	gap: 22px;
 	margin-bottom: 71px;
 	@media (max-width: $desktop) {
 		margin-bottom: 50px;
 		overflow: scroll;
+		gap: 15px;
+		padding-bottom: 13px;
 	}
-}
-.howWork-road-cell-container {
-	display: flex;
-	flex-direction: column;
-	width: 183px;
-	height: 125px;
-}
-.howWork-road-cell {
-	display: flex;
-	gap: 34px;
-	align-items: center;
-	p {
-		border-radius: 10px;
-		background: #fff;
+	&__container {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: $black;
-		font-size: 24px;
-		font-style: normal;
-		font-weight: bold;
-		line-height: 20px;
-		width: 70px;
-		height: 50px;
-		margin: 0;
-	}
-}
-.howWork-road-cell-line {
-	border-bottom: 1px solid $light-green;
-	display: block;
-	width: 77px;
-	height: 1px;
-}
-.howWork-road-cell-label {
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 20px;
-	@media (max-width: $desktop) {
-		font-size: 14px;
-	}
-}
-
-.howWork-preview-container {
-	display: flex;
-	gap: 70px;
-	margin-bottom: 133px;
-	@media (max-width: $desktop) {
-		margin-bottom: 55px;
-	}
-}
-.howWork-preview-image {
-	display: flex;
-	gap: 35px;
-	@media (max-width: $desktop) {
-		display: none;
-	}
-}
-
-.howWork-grid-column1 {
-	display: flex;
-	width: 173px;
-	gap: 15px;
-	flex-direction: column;
-}
-.howWork-grid-column1-bg {
-	width: 173px;
-	height: 125px;
-	background-color: $light-green;
-	border-radius: 5px;
-}
-.howWork-grid-column1-img {
-	width: 173px;
-	height: 210px;
-	background-image: url(../../../assets/images/work1.png);
-}
-.howWork-grid-column2 {
-	display: flex;
-	width: 173px;
-	gap: 15px;
-	flex-direction: column;
-}
-.howWork-grid-column2-bg {
-	width: 210px;
-	height: 75px;
-	background-color: $light-green;
-	border-radius: 5px;
-}
-.howWork-grid-column2-img {
-	width: 210px;
-	height: 260px;
-	background-image: url(../../../assets/images/work2.png);
-}
-.howWork-preview-infonmation {
-	p {
-		color: $black;
-		font-size: 36px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		text-transform: uppercase;
-		@media (max-width: $desktop) {
-			font-size: 20px;
-			margin-top: 0;
-		}
-	}
-	span {
-		color: $light-green;
-		font-size: 36px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		text-transform: uppercase;
-		@media (max-width: $desktop) {
-			font-size: 20px;
-		}
-	}
-}
-
-.howWork-preview-form {
-	p {
-		font-size: 15px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 12px;
-	}
-}
-.howWork-button-container {
-	display: flex;
-	gap: 10px;
-	align-items: flex-end;
-	width: 100%;
-
-	@media (max-width: $desktop) {
 		flex-direction: column;
-		align-items: flex-start;
-	}
-}
+		width: 183px;
+		height: 125px;
 
-.col-3 {
-	float: left;
-	position: relative;
-	width: 210px;
-	@media (max-width: $desktop) {
-		width: 100%;
+		padding: 3px;
+		@media (max-width: $desktop) {
+			flex-direction: row;
+			min-width: 150px;
+			height: 60px;
+			align-items: flex-start;
+			gap: 5px;
+			background-color: rgba(#fff, 0.5);
+			border-radius: 5px;
+		}
+		p {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 20px;
+			@media (max-width: $desktop) {
+				font-size: 14px;
+				margin: 0;
+			}
+		}
 	}
-}
-.effect-16:focus {
-	outline: none;
-	height: 50px;
-}
-.effect-16 {
-	border: 0;
-	border-bottom: 1px solid #ccc;
-	border-radius: 5px 5px 0px 0px;
-	height: 50px;
-	padding: 15px;
-	background-color: $white;
-	font:
-		15px/24px 'Lato',
-		Arial,
-		sans-serif;
-	color: #333;
-	width: 100%;
-	box-sizing: border-box;
-	letter-spacing: 1px;
-	border: none;
-}
-.effect-16 ~ .focus-border {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-
-	background-color: $light-green;
-	transition: 0.4s;
-}
-.effect-16:focus ~ .focus-border,
-.has-content.effect-16 ~ .focus-border {
-	width: 100%;
-	transition: 0.4s;
-}
-.effect-16 ~ label {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	top: 9px;
-	color: #aaa;
-	transition: 0.3s;
-	z-index: -1;
-	letter-spacing: 0.5px;
-}
-.effect-16:focus ~ label,
-.has-content.effect-16 ~ label {
-	top: 4px;
-	font-size: 12px;
-	color: #85a5a9;
-	transition: 0.3s;
-	z-index: 1;
-	left: 4px;
-}
-.input-effect .effect-16:focus {
-	border-radius: 5px 5px 0px 0px;
-	background: #d9d9d9;
-}
-// .input-effect .effect-16 {
-// 	border-radius: 5px 5px 0px 0px;
-// 	background: $white;
-// }
-.howWork-button {
-	width: 250px;
-	height: 50px;
-	gap: 10px;
-	border-radius: 5px;
-	background: #c45645;
-	color: #f5f5f5;
-	font-family: Inter;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 20px;
-	border: none;
-	@media (max-width: $desktop) {
-		width: 100%;
+	&__cell {
+		display: flex;
+		gap: 34px;
+		align-items: center;
+		p {
+			border-radius: 10px;
+			background: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $black;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: bold;
+			line-height: 20px;
+			width: 70px;
+			height: 50px;
+			margin: 0;
+		}
+		span {
+			border-bottom: 1px solid $light-green;
+			display: block;
+			width: 77px;
+			height: 1px;
+		}
+		@media (max-width: $desktop) {
+			p {
+				width: 22px;
+				height: 22px;
+				color: $black;
+				font-style: normal;
+				font-weight: 400;
+				line-height: 20px;
+				border: none;
+				background: none;
+				text-align: center;
+				font-size: 16px;
+			}
+			span {
+				display: none;
+			}
+		}
 	}
-}
-input:not(:invalid) label {
-	display: none;
 }

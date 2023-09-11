@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HowWeWorkComponent } from './how-we-work.component';
+import { GeneralCleanComponent } from './general-clean.component';
 
-describe('HowWeWorkComponent', () => {
-  let component: HowWeWorkComponent;
-  let fixture: ComponentFixture<HowWeWorkComponent>;
+describe('GeneralCleanComponent', () => {
+  let component: GeneralCleanComponent;
+  let fixture: ComponentFixture<GeneralCleanComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HowWeWorkComponent ]
+      declarations: [ GeneralCleanComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HowWeWorkComponent);
+    fixture = TestBed.createComponent(GeneralCleanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
