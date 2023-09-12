@@ -119,6 +119,11 @@
 			font-weight: 400;
 			line-height: 44px;
 			margin-bottom: 10px;
+
+      &.active {
+        background: $yellow;
+      }
+
 			@media (max-width: $desktop) {
 				border-radius: 5px;
 				border: 1px solid rgba(79, 77, 74, 0.5);
@@ -217,6 +222,11 @@
 		letter-spacing: 1px;
 		border: none;
 	}
+  &__form-textarea {
+    mat-form-field {
+      width: 100%;
+    }
+  }
 	&__form {
 		& textarea {
 			box-sizing: border-box;
@@ -339,41 +349,6 @@
 	}
 }
 
-.clean-info__preview__input__effect ~ .clean-info__preview__focus-border {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 2px;
-
-	background-color: $light-green;
-	transition: 0.4s;
-}
-.clean-info__preview__input__effect:focus ~ .clean-info__preview__focus-border,
-.has-content.effect-16 ~ .clean-info__preview__focus-border {
-	width: 100%;
-	transition: 0.4s;
-}
-.clean-info__preview__input__effect ~ label {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	top: 9px;
-	color: #aaa;
-	transition: 0.3s;
-	z-index: -1;
-	letter-spacing: 0.5px;
-}
-.clean-info__preview__input__effect:focus ~ label,
-.has-content.clean-info__preview__input__effect ~ label {
-	top: 4px;
-	font-size: 12px;
-	color: #85a5a9;
-	transition: 0.3s;
-	z-index: 1;
-	left: 4px;
-}
-.input-effect .clean-info__preview__input__effect:focus {
-	border-radius: 5px 5px 0px 0px;
-	background: #d9d9d9;
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: $white ;
 }

@@ -38,6 +38,7 @@ import { DryCleanComponent } from './components/calculate-price/typesClean/dry-c
 import { WindowCleanComponent } from './components/calculate-price/typesClean/window-clean/window-clean.component';
 import { DifferentCleanComponent } from './components/calculate-price/typesClean/different-clean/different-clean.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
 	declarations: [
 		AppComponent,
@@ -81,6 +82,7 @@ import { MatRadioModule } from '@angular/material/radio';
 		NgImageSliderModule,
 		MatDialogModule,
 		MatRadioModule,
+		MatInputModule,
 	],
 	providers: [AboutCompanyService],
 	bootstrap: [AppComponent],

@@ -10,8 +10,12 @@ const routes: Routes = [
 		component: RootComponent,
 	},
 	{
-		path: '**',
+		path: '404',
 		component: NotExistComponent,
+	},
+	{
+		path: '**',
+		redirectTo: '404',
 	},
 ];
 

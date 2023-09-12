@@ -2,19 +2,17 @@
 	<div class="clean-info__options">
 		<p>Чем чаще уборка, <span>тем выше скидка</span></p>
 		<div class="clean-info__options__button">
-			<div class="clean-info__options__button__container">
-				<button>-20%</button>
-				<span>раз в неделю</span>
-			</div>
-			<div class="clean-info__options__button__container">
-				<button>-15%</button>
-				<span>раз в две недели</span>
-			</div>
-			<div class="clean-info__options__button__container">
-				<button>-10%</button>
-				<span>раз в три неделю</span>
-			</div>
-			<button>разовая уборка</button>
+      <ng-container *ngFor="let type of typesClean">
+        <div class="clean-info__options__button__container" *ngIf="type.percent; else oneClean">
+          <button (click)="changeClean(type.title)" [class.active]="typeClean === type.title">{{type.percent}}%</button>
+          <span>{{type.title}}</span>
+        </div>
+        <ng-template #oneClean>
+          <div class="clean-info__options__button__container">
+            <button (click)="changeClean(type.title)" [class.active]="typeClean === type.title">{{type.title}}</button>
+          </div>
+        </ng-template>
+      </ng-container>
 		</div>
 		<p>Аллергия. Дети.Животные - <span>особенности уборки</span></p>
 		<div class="clean-info__options__features">
@@ -30,30 +28,36 @@
 			</p>
 		</div>
 		<div class="clean-info__form">
-			<div class="clean-info__form__input-container">
-				<div class="clean-info__input input-effect">
-					<input class="clean-info__preview__input__effect" type="text" placeholder="Имя" required />
-					<label>Имя</label>
-					<span class="clean-info__preview__focus-border"></span>
-				</div>
-				<div class="clean-info__input input-effect">
-					<input class="clean-info__preview__input__effect" type="tel" placeholder="Телефон" required />
-					<label>Телефон</label>
-					<span class="clean-info__preview__focus-border"></span>
-				</div>
-				<div class="clean-info__input input-effect">
-					<input class="clean-info__preview__input__effect" type="email" placeholder="Емаил" required />
-					<label>Емаил</label>
-					<span class="clean-info__preview__focus-border"></span>
-				</div>
-			</div>
-			<textarea
-				name=""
-				id=""
-				cols="30"
-				rows="10"
-				placeholder="комментарии к заказу, укажите ваш адрес, способ связи с вами, Дату и время"
-			></textarea>
+      <form [formGroup]="orderForm">
+        <div class="clean-info__form__input-container">
+          <mat-form-field>
+            <mat-label>Имя</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Телефон</mat-label>
+            <input matInput formControlName="phone">
+          </mat-form-field>
+        </div>
+        <div class="clean-info__form-textarea">
+          <mat-form-field>
+          <textarea
+            matInput
+            placeholder="комментарии к заказу, укажите ваш адрес, способ связи с вами, Дату и время"
+            cols="30"
+            rows="5"
+            formControlName="message"
+          ></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+
 			<p>*данный расчет является предварительным, точную стоимость менеджер компании озвучит после осмотра помещения</p>
 			<p>*наличный или безналичный расчет только после приемки оказанных услуг</p>
 			<a href="/">С юридическими лицами работаем на индивидуальных условиях</a>
@@ -65,10 +69,10 @@
 			<p>Общая площадь: <span>{{square}} м2</span></p>
 			<p>Помещение: <span>{{place}}</span></p>
 			<p>Вид уборки: <span>Поддерживаящая</span></p>
-			<p>Периодичность: <span>разовая уборка</span></p>
+			<p>Периодичность: <span>{{typeClean}}</span></p>
 			<p>Дополнительные услуги:<span>{{getOptions}}</span></p>
 		</div>
-		<button>Заказать</button>
+		<button (click)="sendOrder()">Заказать</button>
 		<p>при оставлении заявки, нажимая на кнопку, вы даете согласие на обработку ваших персональных данных</p>
 	</div>
 </section>

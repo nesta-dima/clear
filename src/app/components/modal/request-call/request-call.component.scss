@@ -1,0 +1,59 @@
+@import '../../../../styles/variables.scss';
+
+.request {
+  &-call {
+    padding: 35px;
+    text-align: center;
+    img {
+      margin-bottom: 20px;
+    }
+
+    &__loader{
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__title{
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 10px;
+      &-description{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__sub-title{
+      text-align: center;
+      max-width: 260px;
+      color: rgba($black,.5);
+      margin: 0 0 20px;
+      padding-right: 0;
+    }
+
+    &__form{
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    button{
+      background-color: $red;
+      color: $white;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
+  &-done{
+    padding: 35px;
+  }
+}
