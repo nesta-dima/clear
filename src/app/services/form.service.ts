@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FormService {
 	square$ = new BehaviorSubject<string>('80');
-	place$ = new BehaviorSubject<string>('');
+	place$ = new BehaviorSubject<string>('Квартира');
 
 	generalValues$ = new BehaviorSubject<any>([]);
 	maintenanceValues$ = new BehaviorSubject<any>([]);

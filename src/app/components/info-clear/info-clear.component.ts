@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormService } from '../../services/form.service';
+import { FormBuilder, Validators } from '@angular/forms';
 // import emailjs from '@emailjs/browser';
 
 @Component({
@@ -8,13 +9,31 @@ import { FormService } from '../../services/form.service';
 	styleUrls: ['./info-clear.component.scss'],
 })
 export class InfoClearComponent implements OnInit {
+	typesClean = [
+		{ percent: '-20', title: 'раз в неделю' },
+		{ percent: '-15', title: 'раз в две недели' },
+		{ percent: '-10', title: 'раз в три недели' },
+		{ percent: null, title: 'разовая уборка' },
+	];
+
 	square = '';
 	place = '';
 	generalOptions = [];
 	maintenanceOptions = [];
 	windowOptions = [];
 	dryOptions = [];
-	constructor(private formService: FormService) {}
+	typeClean = 'разовая уборка';
+
+	orderForm = this.fb.group({
+		firstName: ['', Validators.required],
+		email: ['', [Validators.required, Validators.email]],
+		phone: ['', [Validators.required]],
+		message: [''],
+	});
+	constructor(
+		private formService: FormService,
+		public fb: FormBuilder,
+	) {}
 
 	ngOnInit() {
 		this.formService.square$.subscribe((square) => {
@@ -42,7 +61,15 @@ export class InfoClearComponent implements OnInit {
 	}
 
 	sendOrder() {
-		console.log('111');
+		if (this.orderForm.valid) {
+			alert('We are working on it');
+		}
+
+		Object.keys(this.orderForm.controls).forEach((field) => {
+			const control = this.orderForm.get(field);
+			control?.markAsTouched({ onlySelf: true });
+		});
+
 		// emailjs.init('BtuZziYvjSyGPZ09q');
 		// emailjs.send('service_bi4fnoa', 'template_0jftpsg', {
 		// 	from_name: 'Дмитрий',
@@ -58,5 +85,9 @@ export class InfoClearComponent implements OnInit {
 		// 		'\n' +
 		// 		'Дополнительные услуги:Погладить белье, Дополнительные часы, Дополнительный сан. узел, Уборка гардероба',
 		// });
+	}
+
+	changeClean(title: string) {
+		this.typeClean = title;
 	}
 }
