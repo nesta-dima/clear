@@ -1,0 +1,233 @@
+@import '../../../styles/variables.scss';
+.page-404 {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: $white;
+	border: 1px solid #000;
+	z-index: 3;
+	background:
+		url(../../../assets//404/Ellipse5.svg),
+		url(../../../assets//404/Oval.svg),
+		url(../../../assets//404/Path3.svg) top 100% left 100%,
+		url(../../../assets//404/Path4-1.svg) top 100% left,
+		url(../../../assets//404/Path4.svg) top left 100%;
+
+	background-repeat: no-repeat;
+	@media (max-width: $desktop) {
+		background:
+			url(../../../assets//404/Oval.svg) top left -20%,
+			url(../../../assets//404/Path3.svg) top 100% left 100%,
+			url(../../../assets//404/Path4-1.svg) top 100% left,
+			url(../../../assets//404/Path4.svg) top left 100%;
+		background-repeat: no-repeat;
+		background-size: 39%, 62%, 41%, 51%;
+	}
+	&-smile {
+		position: absolute;
+		z-index: 3;
+		left: 38%;
+		top: 38%;
+		width: 436px;
+		height: 251px;
+		background: url(../../../assets/404/Frame.svg) center;
+
+		@media (max-width: $desktop) {
+			left: -10%;
+			top: 30%;
+			transform: scale(0.7);
+		}
+	}
+	h1 {
+		display: flex;
+		color: #85a5a9;
+		font-weight: bolder;
+		margin: 0 auto;
+		font-size: 430px;
+		justify-content: center;
+		@media (max-width: $desktop) {
+			font-size: 202px;
+			margin-top: 12%;
+		}
+	}
+	h2 {
+		// position: absolute;
+		// top: 65%;
+		// left: 37%;
+		color: $black;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 44px; /* 183.333% */
+		text-transform: capitalize;
+		@media (max-width: $desktop) {
+			font-size: 14px;
+			width: 100vh;
+			left: 8%;
+		}
+	}
+	button {
+		// position: absolute;
+		// top: 73%;
+		// left: 39%;
+		width: 490px;
+		height: 20px;
+		padding: 20px 56px 20px 65px;
+		border-radius: 10px;
+		background: #c45645;
+		color: #f5f5f5;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
+		text-transform: lowercase;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: -1;
+		@media (max-width: $desktop) {
+			width: 90%;
+			left: 7%;
+			top: 75%;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	.boll {
+		border-radius: 50%;
+		&-pink {
+			position: absolute;
+			left: 55%;
+			top: 2%;
+			background-color: #ef5da8;
+			width: 60px;
+			height: 60px;
+		}
+		&-blue {
+			position: absolute;
+			left: 44%;
+			top: 7%;
+			width: 167px;
+			height: 167px;
+			background: #d8edf7;
+			z-index: -1;
+		}
+		&-grey {
+			background: rgba(139, 147, 192, 0.4);
+			width: 119px;
+			height: 106px;
+			position: absolute;
+			left: 76%;
+			top: 30%;
+		}
+		&-light {
+			background: #f4e4d5;
+			width: 133.097px;
+			height: 115.289px;
+			position: absolute;
+			left: 87%;
+			top: 36%;
+		}
+		&-orange {
+			width: 37px;
+			height: 32px;
+			background: #ffb800;
+			position: absolute;
+			left: 96%;
+			top: 62%;
+		}
+		&-light-grey {
+			width: 59.469px;
+			height: 51.512px;
+			background: #d8edf7;
+			position: absolute;
+			left: 10%;
+			top: 33%;
+		}
+		&-violet {
+			background: #9baeff;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			left: 30%;
+			top: 77%;
+		}
+		&-violet-light {
+			background: rgba(139, 147, 192, 0.4);
+			width: 209px;
+			height: 186px;
+			position: absolute;
+			left: 17%;
+			top: 39%;
+		}
+		&-404-grey {
+			display: flex;
+			width: 113px;
+			height: 113px;
+			font-size: 45px;
+			font-weight: bolder;
+			color: #d8edf7;
+			background: #85a5a9;
+			position: absolute;
+			left: 17%;
+			top: 39%;
+			text-align: center;
+			margin: 0 auto;
+			align-items: center;
+			justify-content: center;
+		}
+		@media (max-width: $desktop) {
+			display: none;
+		}
+	}
+	.boll-404 {
+		display: flex;
+		font-size: 45px;
+		font-weight: bolder;
+		border-radius: 50%;
+		color: white;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		width: 113px;
+		height: 113px;
+		position: absolute;
+		z-index: -1;
+		&-grey {
+			background: #85a5a9;
+
+			left: 28%;
+			top: 13%;
+		}
+		&-yellow {
+			background-color: #ffb800;
+			left: 63%;
+			top: 76%;
+		}
+		&-grey-light {
+			background-color: #85a5a9;
+			left: 76%;
+			top: 63%;
+		}
+		&-pink {
+			background-color: #fcddec;
+			left: 63%;
+			top: 17%;
+		}
+		&-blue {
+			background-color: #ef5da8;
+			left: 18%;
+			top: 81%;
+		}
+		@media (max-width: $desktop) {
+			display: none;
+		}
+	}
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}

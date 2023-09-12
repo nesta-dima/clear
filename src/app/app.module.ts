@@ -28,7 +28,6 @@ import { RootComponent } from './page/root/root.component';
 import { NotExistComponent } from './page/not-exist/not-exist.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HowWeWorkComponent } from './components/how-we-work/how-we-work.component';
-import { PageErrorComponent } from './components/page-error/page-error.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ClearSliderComponent } from './components/clear-slider/clear-slider.component';
 import { ResultSliderComponent } from './components/result-slider/result-slider.component';
@@ -52,7 +51,6 @@ import { MatInputModule } from '@angular/material/input';
 		InfoClearComponent,
 		RootComponent,
 		NotExistComponent,
-		PageErrorComponent,
 		HowWeWorkComponent,
 		ClearSliderComponent,
 		ResultSliderComponent,
