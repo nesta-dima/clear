@@ -12,4 +12,5 @@ export class FormService {
 	maintenanceValues$ = new BehaviorSubject<any>([]);
 	windowValues$ = new BehaviorSubject<any>([]);
 	dryValues$ = new BehaviorSubject<any>([]);
+	typesCleanCheckBox$ = new BehaviorSubject<any>({ clean1: false, clean2: false, clean3: false, clean4: false });
 }

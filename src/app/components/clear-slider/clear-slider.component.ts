@@ -7,7 +7,7 @@ import { NgImageSliderComponent } from 'ng-image-slider';
 	styleUrls: ['./clear-slider.component.scss'],
 })
 export class ClearSliderComponent {
-	@ViewChild('nav') slider!: NgImageSliderComponent;
+	// @ViewChild('nav') slider!: NgImageSliderComponent;
 	imageObject = [
 		{
 			image: '/assets/images/review-1.png',
@@ -39,11 +39,11 @@ export class ClearSliderComponent {
 		},
 	];
 
-	prevImageClick() {
-		this.slider.prev();
-	}
-
-	nextImageClick() {
-		this.slider.next();
-	}
+	// prevImageClick() {
+	// 	this.slider.prev();
+	// }
+	//
+	// nextImageClick() {
+	// 	this.slider.next();
+	// }
 }

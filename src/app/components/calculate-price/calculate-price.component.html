@@ -22,6 +22,23 @@
             <mat-radio-button value="Квартира">КВАРТИРА</mat-radio-button>
           </mat-radio-group>
         </div>
+        <div class="option">
+          <div class="option__title"><div><span>3</span></div>Вид уборки:</div>
+          <div class="option__types-clean">
+            <div>
+              <mat-checkbox class="example-margin" [(ngModel)]="typesCleanCheckBox.clean1" (change)="changeTypesCleanCheckBox()">генеральная уборка</mat-checkbox>
+            </div>
+            <div>
+              <mat-checkbox class="example-margin" [(ngModel)]="typesCleanCheckBox.clean2" (change)="changeTypesCleanCheckBox()">поддерживающая уборка</mat-checkbox>
+            </div>
+            <div>
+              <mat-checkbox class="example-margin" [(ngModel)]="typesCleanCheckBox.clean3" (change)="changeTypesCleanCheckBox()">химчистка</mat-checkbox>
+            </div>
+            <div>
+              <mat-checkbox class="example-margin" [(ngModel)]="typesCleanCheckBox.clean4" (change)="changeTypesCleanCheckBox()">мойка окон</mat-checkbox>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <div  class="image"></div>
@@ -29,7 +46,7 @@
 
     </div>
     <div class="option">
-      <div class="option__title"><div><span>3</span></div>вид уборки и дополнительные услуги</div>
+      <div class="option__title"><div><span>4</span></div>дополнительные услуги</div>
       <div class="select">
         <mat-form-field appearance="outline">
           <mat-label>Генеральная уборка</mat-label>

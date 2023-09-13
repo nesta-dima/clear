@@ -5,6 +5,12 @@
   .option{
     padding: 20px 0;
 
+    &__types-clean {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-transform: uppercase;
+    }
+
     .select {
       display: flex;
       gap: 20px;
