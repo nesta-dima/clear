@@ -97,6 +97,13 @@ export class CalculatePriceComponent implements OnInit {
 	key2: any;
 	key3: any;
 
+	typesCleanCheckBox = {
+		clean1: false,
+		clean2: false,
+		clean3: false,
+		clean4: false,
+	};
+
 	constructor(
 		public dialog: MatDialog,
 		public formService: FormService,
@@ -138,5 +145,9 @@ export class CalculatePriceComponent implements OnInit {
 	}
 	dryChange() {
 		this.formService.dryValues$.next(this.dryValues.value);
+	}
+
+	changeTypesCleanCheckBox() {
+		this.formService.typesCleanCheckBox$.next(this.typesCleanCheckBox);
 	}
 }

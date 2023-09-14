@@ -1,7 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { FormService } from '../../services/form.service';
 import { FormBuilder, Validators } from '@angular/forms';
 // import emailjs from '@emailjs/browser';
+
+const DEFAULT = {
+	clear1: 'генеральная уборка',
+	clear2: 'поддерживающая уборка',
+	clear3: 'химчистка',
+	clear4: 'мойка окон',
+};
 
 @Component({
 	selector: 'app-info-clear',
@@ -22,6 +29,8 @@ export class InfoClearComponent implements OnInit {
 	maintenanceOptions = [];
 	windowOptions = [];
 	dryOptions = [];
+	typesCleanCheckBox = {};
+
 	typeClean = 'разовая уборка';
 
 	orderForm = this.fb.group({
@@ -30,6 +39,12 @@ export class InfoClearComponent implements OnInit {
 		phone: ['', [Validators.required]],
 		message: [''],
 	});
+	get getTypesCleanCheckBox() {
+		return Object.entries(this.typesCleanCheckBox)
+			.filter(([, value]) => value)
+			.map((el) => this.getNameTypeClean(el[0]))
+			.join(', ');
+	}
 	constructor(
 		private formService: FormService,
 		public fb: FormBuilder,
@@ -53,6 +68,9 @@ export class InfoClearComponent implements OnInit {
 		});
 		this.formService.dryValues$.subscribe((dry) => {
 			this.dryOptions = dry;
+		});
+		this.formService.typesCleanCheckBox$.subscribe((types) => {
+			this.typesCleanCheckBox = types;
 		});
 	}
 
@@ -89,5 +107,13 @@ export class InfoClearComponent implements OnInit {
 
 	changeClean(title: string) {
 		this.typeClean = title;
+	}
+
+	private getNameTypeClean(elElement: string) {
+		if (elElement === 'clean1') return DEFAULT.clear1;
+		if (elElement === 'clean2') return DEFAULT.clear2;
+		if (elElement === 'clean3') return DEFAULT.clear3;
+		if (elElement === 'clean4') return DEFAULT.clear4;
+		return '';
 	}
 }
