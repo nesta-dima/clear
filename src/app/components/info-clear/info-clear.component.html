@@ -70,9 +70,10 @@
 			<p>Помещение: <span>{{place}}</span></p>
 			<p>Вид уборки: <span>{{getTypesCleanCheckBox}}</span></p>
 			<p>Периодичность: <span>{{typeClean}}</span></p>
-			<p>Дополнительные услуги:<span>{{getOptions}}</span></p>
+			<p>Дополнительные услуги: <span>{{getOptions}}</span></p>
+      <span>{{additionKeys}}</span>
 		</div>
 		<button (click)="sendOrder()">Заказать</button>
-		<p>при оставлении заявки, нажимая на кнопку, вы даете согласие на обработку ваших персональных данных</p>
+		<p class="error" *ngIf="orderForm.invalid && this.isTouched">* Заполните необходимые поля</p>
 	</div>
 </section>

@@ -150,4 +150,14 @@ export class CalculatePriceComponent implements OnInit {
 	changeTypesCleanCheckBox() {
 		this.formService.typesCleanCheckBox$.next(this.typesCleanCheckBox);
 	}
+
+	handleKey1() {
+		this.formService.key1$.next({ value: this.key1, title: 'Забрать ключи перед уборкой' });
+	}
+	handleKey2() {
+		this.formService.key2$.next({ value: this.key2, title: 'Доставить ключи перед уборкой' });
+	}
+	handleKey3() {
+		this.formService.key3$.next({ value: this.key3, title: 'Взять на уборку пылесос' });
+	}
 }

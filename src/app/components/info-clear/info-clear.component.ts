@@ -10,6 +10,11 @@ const DEFAULT = {
 	clear4: 'мойка окон',
 };
 
+interface IAdditionKeys {
+	value: boolean;
+	title: string;
+}
+
 @Component({
 	selector: 'app-info-clear',
 	templateUrl: './info-clear.component.html',
@@ -30,6 +35,19 @@ export class InfoClearComponent implements OnInit {
 	windowOptions = [];
 	dryOptions = [];
 	typesCleanCheckBox = {};
+
+	key1 = {
+		value: false,
+		title: '',
+	};
+	key2 = {
+		value: false,
+		title: '',
+	};
+	key3 = {
+		value: false,
+		title: '',
+	};
 
 	typeClean = 'разовая уборка';
 
@@ -72,17 +90,28 @@ export class InfoClearComponent implements OnInit {
 		this.formService.typesCleanCheckBox$.subscribe((types) => {
 			this.typesCleanCheckBox = types;
 		});
+		this.formService.key1$.subscribe((key1) => {
+			this.key1 = key1;
+		});
+		this.formService.key2$.subscribe((key2) => {
+			this.key2 = key2;
+		});
+		this.formService.key3$.subscribe((key3) => {
+			this.key3 = key3;
+		});
 	}
 
 	get getOptions() {
 		return [...this.generalOptions, ...this.maintenanceOptions, ...this.windowOptions, ...this.dryOptions].join(', ');
 	}
 
+	isTouched = false;
 	sendOrder() {
 		if (this.orderForm.valid) {
 			alert('We are working on it');
+			this.isTouched = false;
 		}
-
+		this.isTouched = true;
 		Object.keys(this.orderForm.controls).forEach((field) => {
 			const control = this.orderForm.get(field);
 			control?.markAsTouched({ onlySelf: true });
@@ -115,5 +144,12 @@ export class InfoClearComponent implements OnInit {
 		if (elElement === 'clean3') return DEFAULT.clear3;
 		if (elElement === 'clean4') return DEFAULT.clear4;
 		return '';
+	}
+
+	get additionKeys() {
+		return [this.key1, this.key2, this.key3]
+			.filter((el: IAdditionKeys) => el.value)
+			.map((el) => el.title)
+			.join(', ');
 	}
 }

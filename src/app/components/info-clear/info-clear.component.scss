@@ -279,6 +279,7 @@
 		}
 	}
 	&__order {
+    width: 100%;
 		position: sticky;
 		top: 20px;
 		height: 245px;
@@ -291,6 +292,9 @@
       margin: 0 0 165px;
       bottom: 100px;
 		}
+    .error {
+      color: $red;
+    }
 		button {
 			border: none;
 			padding: 20px 56px 20px 65px;
