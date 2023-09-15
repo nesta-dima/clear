@@ -1,33 +1,21 @@
 @import '../../../styles/variables.scss';
-.page-404 {
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background: $white;
-	border: 1px solid #000;
-	z-index: 3;
-	background:
-		url(../../../assets//404/Ellipse5.svg),
-		url(../../../assets//404/Oval.svg),
-		url(../../../assets//404/Path3.svg) top 100% left 100%,
-		url(../../../assets//404/Path4-1.svg) top 100% left,
-		url(../../../assets//404/Path4.svg) top left 100%;
 
-	background-repeat: no-repeat;
-	@media (max-width: $desktop) {
-		background:
-			url(../../../assets//404/Oval.svg) top left -20%,
-			url(../../../assets//404/Path3.svg) top 100% left 100%,
-			url(../../../assets//404/Path4-1.svg) top 100% left,
-			url(../../../assets//404/Path4.svg) top left 100%;
-		background-repeat: no-repeat;
-		background-size: 39%, 62%, 41%, 51%;
-	}
+.wrapper {
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	width: $desktop;
+	height: 100vh;
+	max-width: 100%;
+	margin: 0 auto;
+	z-index: 3;
+
 	&-smile {
 		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		z-index: 3;
-		left: 38%;
-		top: 38%;
 		width: 436px;
 		height: 251px;
 		background: url(../../../assets/404/Frame.svg) center;
@@ -51,23 +39,17 @@
 		}
 	}
 	h2 {
-		// position: absolute;
-		// top: 65%;
-		// left: 37%;
 		color: $black;
 		font-size: 24px;
 		font-style: normal;
 		font-weight: 400;
-		line-height: 44px; /* 183.333% */
+		line-height: 44px;
 		text-transform: capitalize;
 		@media (max-width: $desktop) {
 			font-size: 14px;
 		}
 	}
 	button {
-		// position: absolute;
-		// top: 73%;
-		// left: 39%;
 		width: 490px;
 		height: 20px;
 		padding: 20px 56px 20px 65px;
@@ -124,7 +106,7 @@
 			width: 133.097px;
 			height: 115.289px;
 			position: absolute;
-			left: 87%;
+			left: 90%;
 			top: 36%;
 		}
 		&-orange {
@@ -156,7 +138,7 @@
 			width: 209px;
 			height: 186px;
 			position: absolute;
-			left: 17%;
+			left: 10%;
 			top: 39%;
 		}
 		&-404-grey {
@@ -200,8 +182,8 @@
 		}
 		&-yellow {
 			background-color: #ffb800;
-			left: 63%;
-			top: 76%;
+			left: 5%;
+			top: 66%;
 		}
 		&-grey-light {
 			background-color: #85a5a9;
@@ -223,12 +205,33 @@
 		}
 	}
 }
+.page-404 {
+	position: relative;
+	background: $white;
+	background:
+		url(../../../assets//404/Ellipse5.svg),
+		url(../../../assets//404/Oval.svg),
+		url(../../../assets//404/Path3.svg) top 100% left 100%,
+		url(../../../assets//404/Path4-1.svg) top 100% left,
+		url(../../../assets//404/Path4.svg) top left 100%;
+
+	background-repeat: no-repeat;
+	@media (max-width: $desktop) {
+		background:
+			url(../../../assets//404/Oval.svg) top left -20%,
+			url(../../../assets//404/Path3.svg) top 100% left 100%,
+			url(../../../assets//404/Path4-1.svg) top 100% left,
+			url(../../../assets//404/Path4.svg) top left 100%;
+		background-repeat: no-repeat;
+		background-size: 39%, 62%, 41%, 51%;
+	}
+}
 .container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
-	@media (max-width: $desktop) {
-		margin-top: 35%;
-	}
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
