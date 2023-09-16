@@ -9,7 +9,7 @@
         </div>
         <ng-template #oneClean>
           <div class="clean-info__options__button__container">
-            <button (click)="changeClean(type.title)" [class.active]="typeClean === type.title">{{type.title}}</button>
+            <button class="button-one" (click)="changeClean(type.title)" [class.active]="typeClean === type.title">{{type.title}}</button>
           </div>
         </ng-template>
       </ng-container>
@@ -73,7 +73,7 @@
 			<p>Дополнительные услуги: <span>{{getOptions}}</span></p>
       <span>{{additionKeys}}</span>
 		</div>
-		<button (click)="sendOrder()">Заказать</button>
+		<button (click)="sendOrder()" [class.disabled]="isLoading">Заказать</button>
 		<p class="error" *ngIf="orderForm.invalid && this.isTouched">* Заполните необходимые поля</p>
 	</div>
 </section>

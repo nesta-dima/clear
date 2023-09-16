@@ -106,6 +106,13 @@
 			justify-content: center;
 			align-items: center;
 		}
+
+    .button-one {
+      @media (max-width: $desktop) {
+        width: 100%;
+        height: 100%;
+      }
+    }
 		button {
 			height: 50px;
 			padding: 25px;
@@ -287,10 +294,9 @@
 		margin-top: 86px;
 		margin-bottom: 120px;
 		@media (max-width: $desktop) {
-      display: none;
-			width: 100%;
+      position: initial;
       margin: 0 0 165px;
-      bottom: 100px;
+      padding-top: 20px;
 		}
     .error {
       color: $red;
@@ -308,6 +314,12 @@
 			font-weight: 500;
 			line-height: 20px;
       cursor: pointer;
+
+      &.disabled{
+        background: $black;
+        color: $white;
+      }
+
 		}
 		p {
 			font-size: 12px;
@@ -328,7 +340,6 @@
 		overflow-x: hidden;
 		@media (max-width: $desktop) {
 			background: rgba(133, 165, 169);
-      display: none;
 		}
 		h4 {
 			margin: 0;
@@ -352,6 +363,7 @@
 		}
 	}
 }
+
 
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
   background-color: $white ;
