@@ -9,6 +9,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       text-transform: uppercase;
+
+      @media (max-width: $desktop) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .select {

@@ -29,7 +29,9 @@ export class RequestCallComponent {
 	constructor(
 		@Inject(MAT_DIALOG_DATA) public data: any,
 		public fb: FormBuilder,
-	) {}
+	) {
+		this.isSendRequest = data?.isSendRequest || false;
+	}
 	isSendRequest = false;
 	isLoading = false;
 	registrationForm = this.fb.group({

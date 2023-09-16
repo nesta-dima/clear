@@ -13,4 +13,8 @@ export class FormService {
 	windowValues$ = new BehaviorSubject<any>([]);
 	dryValues$ = new BehaviorSubject<any>([]);
 	typesCleanCheckBox$ = new BehaviorSubject<any>({ clean1: false, clean2: false, clean3: false, clean4: false });
+
+	key1$ = new BehaviorSubject<{ value: boolean; title: string }>({ value: false, title: '' });
+	key2$ = new BehaviorSubject<{ value: boolean; title: string }>({ value: false, title: '' });
+	key3$ = new BehaviorSubject<{ value: boolean; title: string }>({ value: false, title: '' });
 }
