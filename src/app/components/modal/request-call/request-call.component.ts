@@ -30,7 +30,7 @@ export class RequestCallComponent {
 		@Inject(MAT_DIALOG_DATA) public data: any,
 		public fb: FormBuilder,
 	) {
-		this.isSendRequest = data.isSendRequest || false;
+		this.isSendRequest = data?.isSendRequest || false;
 	}
 	isSendRequest = false;
 	isLoading = false;
