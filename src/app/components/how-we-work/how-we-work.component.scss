@@ -152,7 +152,7 @@
 	}
 	&__preview__input-effect {
 		border: 0;
-    border-radius: 5px 5px 0 0;
+		border-radius: 5px 5px 0 0;
 		height: 50px;
 		padding: 15px;
 		background-color: $white;
@@ -196,9 +196,8 @@
 		z-index: 1;
 		left: 4px;
 	}
-	.input-effect &__preview__input-effect:focus {
-		border-radius: 5px 5px 0 0;
-		background: #d9d9d9;
+	.input-effect &__preview__input-effect:focus-visible {
+		outline: none;
 	}
 	&__preview__button {
 		width: 250px;
@@ -212,7 +211,11 @@
 		font-weight: 500;
 		line-height: 20px;
 		border: none;
-    cursor: pointer;
+		cursor: pointer;
+		&:hover {
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			transition: all 0.3s;
+		}
 		@media (max-width: $desktop) {
 			width: 100%;
 		}
