@@ -49,7 +49,7 @@ export class CalculatePriceComponent implements OnInit {
 		'Уборка в шкафу',
 		'Чистка детской коляски',
 		'Убрать лоток для животных',
-		'помыть стены',
+		'Помыть стены',
 	];
 	maintenanceOptions: string[] = [
 		'Погладить белье',
@@ -67,7 +67,7 @@ export class CalculatePriceComponent implements OnInit {
 		'Чистка детской коляски',
 		'Убрать лоток для животных',
 		'Помыть микроволновку',
-		'помыть стены',
+		'Помыть стены',
 	];
 	windowOptions: string[] = [
 		'Помыть 1 окно (2 створки)',
@@ -90,7 +90,7 @@ export class CalculatePriceComponent implements OnInit {
 		'Мягкое кресло',
 		'Обычный стул',
 		'Ковер, м.кв.',
-		'Офисный стулx',
+		'Офисный стул',
 	];
 
 	key1: any;

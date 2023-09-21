@@ -3,8 +3,7 @@
 .main-header {
   color: $black;
   padding: 80px 0 50px;
-  background: url("../../../../src/assets/images/bg_photo.png");
-  background-repeat: no-repeat;
+  background: url("../../../../src/assets/images/bg_photo.png") no-repeat;
   position: relative;
 
   &__social{
@@ -85,7 +84,7 @@
     }
     h2 {
       font-size: 18px;
-
+      font-weight: 500;
     }
   }
   &__types-clean{

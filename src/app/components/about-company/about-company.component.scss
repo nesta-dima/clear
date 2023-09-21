@@ -1,3 +1,5 @@
+@import '../../../styles/variables.scss';
+
 .company{
   padding: 100px 0;
 
@@ -47,7 +49,13 @@
       padding: 0 15px;
     }
 
+    p {
+      color: rgba($black, .8);
+    }
+
     &__card {
+      font-size: 15px;
+      color: rgba($black, .8);
       .icon {
         width: 30px;
         height: 30px;
@@ -97,13 +105,10 @@
       @media (max-width: 1180px) {
         font-size: 24px;
       }
-
-
       span {
         color: #85A5A9;
         font-weight: bold;
       }
-
     }
   }
 }
