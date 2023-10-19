@@ -12,7 +12,6 @@ export class ResultSliderComponent {
 		{
 			image: '/assets/images/result-1.png',
 			thumbImage: '/assets/images/result-1.png',
-			// title: 'Hummingbirds are amazing creatures',
 		},
 		{
 			image: '/assets/images/result-2.png',
@@ -21,12 +20,10 @@ export class ResultSliderComponent {
 		{
 			image: '/assets/images/result-3.png',
 			thumbImage: '/assets/images/result-3.png',
-			// title: 'Example with title.',
 		},
 		{
 			image: '/assets/images/result-4.png',
 			thumbImage: '/assets/images/result-4.png',
-			// title: 'Hummingbirds are amazing creatures',
 		},
 		{
 			image: '/assets/images/result-5.png',
@@ -35,12 +32,10 @@ export class ResultSliderComponent {
 		{
 			image: '/assets/images/result-6.png',
 			thumbImage: '/assets/images/result-6.png',
-			// title: 'Example with title.',
 		},
 		{
 			image: '/assets/images/result-7.png',
 			thumbImage: '/assets/images/result-7.png',
-			// title: 'Hummingbirds are amazing creatures',
 		},
 		{
 			image: '/assets/images/result-8.png',
@@ -49,12 +44,10 @@ export class ResultSliderComponent {
 		{
 			image: '/assets/images/result-9.png',
 			thumbImage: '/assets/images/result-9.png',
-			// title: 'Example with title.',
 		},
 		{
 			image: '/assets/images/result-10.png',
 			thumbImage: '/assets/images/result-10.png',
-			// title: 'Hummingbirds are amazing creatures',
 		},
 		{
 			image: '/assets/images/result-11.png',
@@ -63,17 +56,14 @@ export class ResultSliderComponent {
 		{
 			image: '/assets/images/result-12.png',
 			thumbImage: '/assets/images/result-12.png',
-			// title: 'Example with title.',
 		},
 		{
 			image: '/assets/images/result-13.png',
 			thumbImage: '/assets/images/result-13.png',
-			// title: 'Example with title.',
 		},
 		{
 			image: '/assets/images/result-14.png',
 			thumbImage: '/assets/images/result-14.png',
-			// title: 'Hummingbirds are amazing creatures',
 		},
 		{
 			image: '/assets/images/result-15.png',
@@ -82,7 +72,30 @@ export class ResultSliderComponent {
 		{
 			image: '/assets/images/result-16.png',
 			thumbImage: '/assets/images/result-16.png',
-			// title: 'Example with title.',
+		},
+		{
+			image: '/assets/images/result-17.png',
+			thumbImage: '/assets/images/result-17.png',
+		},
+		{
+			image: '/assets/images/result-18.png',
+			thumbImage: '/assets/images/result-18.png',
+		},
+		{
+			image: '/assets/images/result-19.png',
+			thumbImage: '/assets/images/result-19.png',
+		},
+		{
+			image: '/assets/images/result-20.png',
+			thumbImage: '/assets/images/result-20.png',
+		},
+		{
+			image: '/assets/images/result-21.png',
+			thumbImage: '/assets/images/result-21.png',
+		},
+		{
+			image: '/assets/images/result-22.png',
+			thumbImage: '/assets/images/result-22.png',
 		},
 	];
 }
